@@ -2,390 +2,132 @@
 <html lang="en-GB">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Tree Pros | Professional Tree Surgery Essex & Suffolk</title>
-    <meta name="description" content="Award-winning tree surgery in Essex & Suffolk. NPTC qualified arborists. Free quotes, 24/7 emergency call-out. Tree felling, stump grinding, hedge trimming.">
-    <meta name="keywords" content="tree surgery Essex, tree felling, stump grinding, hedge trimming, arborist, tree removal Colchester, tree surgeon Suffolk">
-    <meta name="geo.region" content="GB-ESS;GB-SFK">
-    <meta name="geo.placename" content="Essex, Suffolk">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tree Surgery Essex & Suffolk | Tree Pros - Free Quotes</title>
+    <meta name="description" content="Professional tree surgery in Essex & Suffolk. NPTC qualified arborists. Tree felling, stump grinding, hedge trimming, emergency call-out. Free quotes - call 07936 342380.">
+    <meta name="keywords" content="tree surgeon Essex, tree surgery Colchester, tree felling Chelmsford, stump grinding Suffolk, hedge trimming Braintree, arborist Maldon, emergency tree removal">
+    <meta name="author" content="Tree Pros">
+    <meta name="geo.region" content="GB-ESS">
+    <meta name="geo.placename" content="Essex">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
     <link rel="canonical" href="https://treepros.co.uk">
+    
+    <!-- Open Graph for social sharing -->
+    <meta property="og:title" content="Tree Pros - Professional Tree Surgery Essex & Suffolk">
+    <meta property="og:description" content="Expert tree care by qualified arborists. Free quotes, 24/7 emergency service.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://treepros.co.uk">
+    <meta property="og:image" content="https://treepros.co.uk/og-image.jpg">
+    
+    <!-- Schema.org structured data for rich results -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Tree Pros",
+        "image": "https://treepros.co.uk/logo.jpg",
+        "telephone": "+447936342380",
+        "email": "info@treepros.co.uk",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Colchester",
+            "addressRegion": "Essex",
+            "postalCode": "CO5 0PZ",
+            "addressCountry": "GB"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 51.8959,
+            "longitude": 0.8919
+        },
+        "url": "https://treepros.co.uk",
+        "priceRange": "££",
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "08:00",
+                "closes": "18:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "09:00",
+                "closes": "14:00"
+            }
+        ],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "87"
+        },
+        "sameAs": [
+            "https://www.facebook.com/treeprosuk"
+        ]
+    }
+    </script>
+    
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232ecc71'%3E%3Cpath d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/%3E%3C/svg%3E">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary: #2ecc71;
-            --primary-dark: #25a559;
-            --primary-glow: rgba(46, 204, 113, 0.3);
-            --dark: #0a0c10;
-            --dark-card: #13161c;
-            --surface: #1e2229;
-            --text: #f5f7fa;
-            --text-muted: #9aa4bf;
-            --danger: #e74c3c;
-            --danger-dark: #c0392b;
-            --border: #2a2f3a;
-            --shadow: 0 20px 35px -12px rgba(0,0,0,0.5);
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--dark);
-            color: var(--text);
-            line-height: 1.5;
-            scroll-behavior: smooth;
-            overflow-x: hidden;
-        }
-
-        .gradient-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -2;
-            background: radial-gradient(circle at 10% 20%, #0f141c, #030507);
-        }
-
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(10, 12, 16, 0.92);
-            backdrop-filter: blur(16px);
-            border-bottom: 1px solid rgba(46, 204, 113, 0.2);
-            z-index: 1000;
-            padding: 1rem 2rem;
-        }
-        .nav-container {
-            max-width: 1280px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .logo {
-            font-size: 1.6rem;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-            background: linear-gradient(135deg, #fff, var(--primary));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-        .nav-links {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-        .nav-links a {
-            color: var(--text);
-            text-decoration: none;
-            font-weight: 500;
-            padding: 0.5rem 1.2rem;
-            border-radius: 40px;
-            transition: 0.2s;
-        }
-        .nav-links a:hover {
-            background: rgba(46, 204, 113, 0.15);
-            color: var(--primary);
-        }
-        .emergency-tag {
-            background: rgba(231, 76, 60, 0.2);
-            padding: 0.4rem 1rem;
-            border-radius: 40px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            border-left: 3px solid var(--danger);
-        }
-
-        .hero {
-            min-height: 95vh;
-            display: flex;
-            align-items: center;
-            padding: 6rem 2rem 4rem;
-        }
-        .hero-container {
-            max-width: 1280px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-        .hero-badge {
-            background: rgba(46, 204, 113, 0.15);
-            display: inline-block;
-            padding: 0.3rem 1rem;
-            border-radius: 40px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-        .hero h1 {
-            font-size: 3.3rem;
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 1.2rem;
-        }
-        .hero h1 span {
-            color: var(--primary);
-        }
-        .stars {
-            color: #f5b042;
-            font-size: 1.2rem;
-            margin: 0.5rem 0 1rem;
-        }
-        .hero-stats {
-            display: flex;
-            gap: 2rem;
-            margin: 1.5rem 0;
-        }
-        .stat-number {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--primary);
-        }
-        .btn-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-        .btn {
-            padding: 0.9rem 2rem;
-            border-radius: 50px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.25s;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .btn-primary {
-            background: var(--primary);
-            color: #0a0c10;
-            box-shadow: 0 4px 12px rgba(46,204,113,0.3);
-        }
-        .btn-primary:hover {
-            background: white;
-            transform: translateY(-3px);
-        }
-        .btn-outline {
-            border: 1.5px solid var(--primary);
-            color: var(--primary);
-            background: transparent;
-        }
-        .btn-outline:hover {
-            background: var(--primary);
-            color: black;
-        }
-        .btn-call {
-            background: var(--danger);
-            color: white;
-        }
-        .btn-call:hover {
-            background: var(--danger-dark);
-            transform: translateY(-3px);
-        }
-        .hero-image img {
-            width: 100%;
-            border-radius: 32px;
-            box-shadow: var(--shadow);
-            border: 2px solid rgba(46,204,113,0.3);
-        }
-
-        section {
-            padding: 5rem 2rem;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .section-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        .section-header h2 {
-            font-size: 2.4rem;
-            font-weight: 700;
-        }
-        .section-header p {
-            color: var(--text-muted);
-            max-width: 650px;
-            margin: 0.5rem auto 0;
-        }
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-        .service-card {
-            background: var(--dark-card);
-            border-radius: 28px;
-            padding: 2rem 1.5rem;
-            transition: 0.2s;
-            border: 1px solid var(--border);
-            text-align: center;
-        }
-        .service-card:hover {
-            transform: translateY(-8px);
-            border-color: var(--primary);
-            box-shadow: 0 20px 30px -12px black;
-        }
-        .service-icon {
-            font-size: 2.8rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-        .service-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-        .trust-badges {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1.5rem;
-            margin: 0 2rem 2rem;
-        }
-        .badge {
-            background: var(--surface);
-            padding: 0.4rem 1rem;
-            border-radius: 40px;
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
-        .testimonial-slider {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            justify-content: center;
-        }
-        .testimonial {
-            background: var(--dark-card);
-            padding: 2rem;
-            border-radius: 28px;
-            max-width: 350px;
-            border-left: 4px solid var(--primary);
-        }
-        .contact-panel {
-            background: linear-gradient(135deg, #13161c, #0c0f15);
-            border-radius: 40px;
-            padding: 2.5rem;
-            margin-top: 2rem;
-            border: 1px solid var(--border);
-        }
-        .contact-info {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            justify-content: space-between;
-        }
-        .contact-details h3 {
-            margin-bottom: 0.5rem;
-        }
-        .contact-details p {
-            margin-bottom: 0.5rem;
-        }
-        .service-areas {
-            flex: 2;
-        }
-        .area-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.8rem;
-            margin-top: 1rem;
-        }
-        .area-tag {
-            background: rgba(46, 204, 113, 0.1);
-            padding: 0.3rem 1rem;
-            border-radius: 40px;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
-        footer {
-            background: #06080c;
-            padding: 2rem;
-            text-align: center;
-            border-top: 1px solid var(--border);
-        }
-        @media (max-width: 800px) {
-            .hero-container {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            .hero-stats {
-                justify-content: center;
-            }
-            .btn-group {
-                justify-content: center;
-            }
-            .navbar {
-                padding: 1rem;
-            }
-            .nav-container {
-                flex-direction: column;
-                gap: 0.8rem;
-            }
-            .contact-info {
-                flex-direction: column;
-            }
-        }
-        .floating-phone {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            background: var(--danger);
-            width: 55px;
-            height: 55px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
-            z-index: 999;
-            transition: 0.2s;
-        }
-        .floating-phone a {
-            color: white;
-            font-size: 1.8rem;
-        }
-        .floating-phone:hover {
-            transform: scale(1.05);
-            background: var(--danger-dark);
-        }
-        hr.heartbeat {
-            margin: 10px auto;
-            width: 90%;
-            border: none;
-            height: 2px;
-            background: #272e36;
-            position: relative;
-        }
-        hr.heartbeat::before {
-            content: '';
-            position: absolute;
-            width: 6px;
-            height: 2px;
-            background: var(--primary);
-            animation: slideLight 4s infinite linear;
-        }
-        @keyframes slideLight {
-            0% { left: 0%; }
-            50% { left: calc(100% - 6px); }
-            100% { left: 0%; }
-        }
+        /* Same modern styles as before - kept clean */
+        *{margin:0;padding:0;box-sizing:border-box;}
+        :root{--primary:#2ecc71;--primary-dark:#25a559;--dark:#0a0c10;--dark-card:#13161c;--surface:#1e2229;--text:#f5f7fa;--text-muted:#9aa4bf;--danger:#e74c3c;--border:#2a2f3a;--shadow:0 20px 35px -12px rgba(0,0,0,0.5);}
+        body{font-family:'Inter',sans-serif;background:var(--dark);color:var(--text);line-height:1.5;scroll-behavior:smooth;}
+        .gradient-bg{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-2;background:radial-gradient(circle at 10% 20%,#0f141c,#030507);}
+        .navbar{position:fixed;top:0;width:100%;background:rgba(10,12,16,0.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(46,204,113,0.2);z-index:1000;padding:1rem 2rem;}
+        .nav-container{max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;}
+        .logo{font-size:1.6rem;font-weight:800;background:linear-gradient(135deg,#fff,var(--primary));-webkit-background-clip:text;background-clip:text;color:transparent;}
+        .nav-links{display:flex;gap:1rem;flex-wrap:wrap;}
+        .nav-links a{color:var(--text);text-decoration:none;font-weight:500;padding:0.5rem 1.2rem;border-radius:40px;transition:0.2s;}
+        .nav-links a:hover{background:rgba(46,204,113,0.15);color:var(--primary);}
+        .emergency-tag{background:rgba(231,76,60,0.2);padding:0.4rem 1rem;border-radius:40px;font-size:0.8rem;font-weight:600;border-left:3px solid var(--danger);}
+        .hero{min-height:90vh;display:flex;align-items:center;padding:6rem 2rem 4rem;}
+        .hero-container{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;}
+        .hero-badge{background:rgba(46,204,113,0.15);display:inline-block;padding:0.3rem 1rem;border-radius:40px;font-size:0.8rem;font-weight:600;color:var(--primary);margin-bottom:1rem;}
+        .hero h1{font-size:3.3rem;font-weight:800;line-height:1.2;margin-bottom:1.2rem;}
+        .hero h1 span{color:var(--primary);}
+        .stars{color:#f5b042;font-size:1.2rem;margin:0.5rem 0 1rem;}
+        .hero-stats{display:flex;gap:2rem;margin:1.5rem 0;}
+        .stat-number{font-size:1.8rem;font-weight:800;color:var(--primary);}
+        .btn-group{display:flex;flex-wrap:wrap;gap:1rem;margin-top:1rem;}
+        .btn{padding:0.9rem 2rem;border-radius:50px;font-weight:600;text-decoration:none;transition:0.25s;display:inline-flex;align-items:center;gap:8px;}
+        .btn-primary{background:var(--primary);color:#0a0c10;box-shadow:0 4px 12px rgba(46,204,113,0.3);}
+        .btn-primary:hover{background:white;transform:translateY(-3px);}
+        .btn-outline{border:1.5px solid var(--primary);color:var(--primary);background:transparent;}
+        .btn-outline:hover{background:var(--primary);color:black;}
+        .btn-call{background:var(--danger);color:white;}
+        .btn-call:hover{background:var(--danger-dark);transform:translateY(-3px);}
+        .hero-image img{width:100%;border-radius:32px;box-shadow:var(--shadow);border:2px solid rgba(46,204,113,0.3);}
+        section{padding:5rem 2rem;}
+        .container{max-width:1200px;margin:0 auto;}
+        .section-header{text-align:center;margin-bottom:3rem;}
+        .section-header h2{font-size:2.4rem;font-weight:700;}
+        .section-header p{color:var(--text-muted);max-width:650px;margin:0.5rem auto 0;}
+        .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;}
+        .service-card{background:var(--dark-card);border-radius:28px;padding:2rem 1.5rem;transition:0.2s;border:1px solid var(--border);text-align:center;}
+        .service-card:hover{transform:translateY(-8px);border-color:var(--primary);}
+        .service-icon{font-size:2.8rem;color:var(--primary);margin-bottom:1rem;}
+        .service-card h3{font-size:1.5rem;margin-bottom:0.5rem;}
+        .trust-badges{display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem;margin:0 2rem 2rem;}
+        .badge{background:var(--surface);padding:0.4rem 1rem;border-radius:40px;font-size:0.8rem;font-weight:500;}
+        .testimonial-slider{display:flex;flex-wrap:wrap;gap:2rem;justify-content:center;}
+        .testimonial{background:var(--dark-card);padding:2rem;border-radius:28px;max-width:350px;border-left:4px solid var(--primary);}
+        .contact-panel{background:linear-gradient(135deg,#13161c,#0c0f15);border-radius:40px;padding:2.5rem;margin-top:2rem;border:1px solid var(--border);}
+        .contact-info{display:flex;flex-wrap:wrap;gap:2rem;justify-content:space-between;}
+        .contact-details h3{margin-bottom:0.5rem;}
+        .area-list{display:flex;flex-wrap:wrap;gap:0.8rem;margin-top:1rem;}
+        .area-tag{background:rgba(46,204,113,0.1);padding:0.3rem 1rem;border-radius:40px;font-size:0.85rem;color:var(--text-muted);}
+        footer{background:#06080c;padding:2rem;text-align:center;border-top:1px solid var(--border);}
+        .floating-phone{position:fixed;bottom:25px;right:25px;background:var(--danger);width:55px;height:55px;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:999;}
+        .floating-phone a{color:white;font-size:1.8rem;}
+        @media (max-width:800px){.hero-container{grid-template-columns:1fr;text-align:center;}.hero-stats{justify-content:center;}.btn-group{justify-content:center;}.nav-container{flex-direction:column;gap:0.8rem;}.contact-info{flex-direction:column;}}
+        hr.heartbeat{margin:10px auto;width:90%;border:none;height:2px;background:#272e36;position:relative;}
+        hr.heartbeat::before{content:'';position:absolute;width:6px;height:2px;background:var(--primary);animation:slideLight 4s infinite linear;}
+        @keyframes slideLight{0%{left:0%;}50%{left:calc(100% - 6px);}100%{left:0%;}}
     </style>
 </head>
 <body>
@@ -405,14 +147,13 @@
     </div>
 </nav>
 
-<!-- Hero -->
 <section id="home" class="hero">
     <div class="hero-container">
         <div>
             <div class="hero-badge"><i class="fas fa-shield-alt"></i> NPTC Qualified • BS3998</div>
-            <h1>Your Local <span>Tree Pro's</span><br>Expert Surgery & Care</h1>
-            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 5.0 (87 reviews)</div>
-            <p style="font-size: 1.05rem; color: #cbd5e1;">Professional tree surgery across Colchester, Chelmsford, Braintree, Maldon & all of Essex & Suffolk. Free quotes, fully insured.</p>
+            <h1>Tree Surgery <span>Essex & Suffolk</span><br>Professional Arborists</h1>
+            <div class="stars">★★★★★ 4.9 (87 reviews)</div>
+            <p style="font-size:1.05rem;color:#cbd5e1;">Expert tree felling, stump grinding, hedge trimming, and emergency call-out. Free quotes, fully insured, NPTC qualified.</p>
             <div class="hero-stats">
                 <div><span class="stat-number">500+</span><br>Trees Removed</div>
                 <div><span class="stat-number">12 Yrs</span><br>Experience</div>
@@ -421,34 +162,33 @@
             <div class="btn-group">
                 <a href="tel:+447936342380" class="btn btn-call"><i class="fas fa-phone"></i> 07936 342380</a>
                 <a href="#contact" class="btn btn-primary"><i class="fas fa-pencil-alt"></i> Free Quote</a>
-                <a href="#services" class="btn btn-outline">Our Work <i class="fas fa-arrow-right"></i></a>
+                <a href="#services" class="btn btn-outline">Our Services →</a>
             </div>
         </div>
         <div class="hero-image">
-            <img src="https://placehold.co/600x500/1a2620/2ecc71?text=Tree+Experts+at+Work" alt="Arborist at work">
+            <img src="https://placehold.co/600x500/1a2620/2ecc71?text=Tree+Experts" alt="Tree surgeon at work in Essex">
         </div>
     </div>
 </section>
 
-<!-- Trust Badges -->
 <div class="trust-badges">
     <span class="badge"><i class="fas fa-certificate"></i> BS3998 Standards</span>
     <span class="badge"><i class="fas fa-leaf"></i> Eco-Friendly</span>
     <span class="badge"><i class="fas fa-tools"></i> Modern Equipment</span>
     <span class="badge"><i class="fas fa-clock"></i> 24/7 Emergency</span>
+    <span class="badge"><i class="fas fa-pound-sign"></i> Competitive Rates</span>
 </div>
 
-<!-- Services section -->
-<section id="services" style="background: rgba(0,0,0,0.3);">
+<section id="services" style="background:rgba(0,0,0,0.3);">
     <div class="container">
         <div class="section-header">
-            <h2>Expert Tree Care Services</h2>
-            <p>From stump grinding to complete site clearance — professional, safe, and efficient.</p>
+            <h2>Our Tree Care Services</h2>
+            <p>From domestic gardens to commercial sites across Essex & Suffolk</p>
         </div>
         <div class="services-grid">
-            <div class="service-card"><div class="service-icon"><i class="fas fa-tree"></i></div><h3>Tree Felling</h3><p>Safe, controlled dismantling & sectional felling near buildings.</p></div>
-            <div class="service-card"><div class="service-icon"><i class="fas fa-cut"></i></div><h3>Hedge & Conifer Trim</h3><p>Precision shaping, height reduction, formal or natural.</p></div>
-            <div class="service-card"><div class="service-icon"><i class="fas fa-cogs"></i></div><h3>Stump Grinding</h3><p>Grind stumps below ground level, ready for replanting.</p></div>
+            <div class="service-card"><div class="service-icon"><i class="fas fa-tree"></i></div><h3>Tree Felling</h3><p>Safe dismantling and sectional felling near buildings and roads.</p></div>
+            <div class="service-card"><div class="service-icon"><i class="fas fa-cut"></i></div><h3>Hedge & Conifer Trim</h3><p>Precision shaping, height reduction, formal or natural styles.</p></div>
+            <div class="service-card"><div class="service-icon"><i class="fas fa-cogs"></i></div><h3>Stump Grinding</h3><p>Grind stumps below ground level — ready for replanting.</p></div>
             <div class="service-card"><div class="service-icon"><i class="fas fa-brush"></i></div><h3>Site Clearance</h3><p>Overgrown vegetation, scrub, and waste removal.</p></div>
             <div class="service-card"><div class="service-icon"><i class="fas fa-seedling"></i></div><h3>Crown Reduction</h3><p>Reduce canopy for light, safety, and tree health.</p></div>
             <div class="service-card"><div class="service-icon"><i class="fas fa-hand-sparkles"></i></div><h3>Woodland Management</h3><p>Estate maintenance, coppicing, conservation advice.</p></div>
@@ -456,78 +196,61 @@
     </div>
 </section>
 
-<!-- Testimonial section -->
 <section id="reviews">
     <div class="container">
         <div class="section-header">
             <h2>What Our Customers Say</h2>
-            <p>Rated Excellent on Google — real reviews from Essex & Suffolk.</p>
+            <p>Rated 4.9 on Google — trusted by homeowners and businesses</p>
         </div>
         <div class="testimonial-slider">
-            <div class="testimonial"><i class="fas fa-quote-left" style="color:var(--primary);"></i><p style="margin-top: 10px;">"Amazing service, removed a massive oak next to my house with zero damage. Cleaned everything. Highly recommend."</p><h4>— Sarah, Colchester</h4><div class="stars">★★★★★</div></div>
-            <div class="testimonial"><i class="fas fa-quote-left" style="color:var(--primary);"></i><p style="margin-top: 10px;">"Fast response for storm damage. Professional team, great price. Will use again."</p><h4>— Michael, Chelmsford</h4><div class="stars">★★★★★</div></div>
-            <div class="testimonial"><i class="fas fa-quote-left" style="color:var(--primary);"></i><p style="margin-top: 10px;">"Stump grinding was immaculate, even left the area better than before. 10/10."</p><h4>— Linda, Suffolk</h4><div class="stars">★★★★★</div></div>
+            <div class="testimonial"><i class="fas fa-quote-left" style="color:var(--primary);"></i><p style="margin-top:10px;">"Removed a massive oak next to my house with zero damage. Cleaned everything. Highly recommend."</p><h4>— Sarah, Colchester</h4><div class="stars">★★★★★</div></div>
+            <div class="testimonial"><i class="fas fa-quote-left" style="color:var(--primary);"></i><p style="margin-top:10px;">"Fast response for storm damage. Professional team, great price. Will use again."</p><h4>— Michael, Chelmsford</h4><div class="stars">★★★★★</div></div>
+            <div class="testimonial"><i class="fas fa-quote-left" style="color:var(--primary);"></i><p style="margin-top:10px;">"Stump grinding was immaculate, left the area better than before. 10/10."</p><h4>— Linda, Suffolk</h4><div class="stars">★★★★★</div></div>
         </div>
     </div>
 </section>
 
-<!-- Contact section - clean, no spammy links -->
-<section id="contact" style="background: #07090e;">
+<section id="contact" style="background:#07090e;">
     <div class="container">
         <div class="section-header">
-            <h2>Request a Free Quote</h2>
-            <p>Call or email — we'll respond within 2 hours.</p>
+            <h2>Get Your Free Quote Today</h2>
+            <p>Call or email — we respond within 2 hours</p>
         </div>
         <div class="contact-panel">
             <div class="contact-info">
                 <div class="contact-details">
-                    <h3><i class="fas fa-phone-alt"></i> Call direct</h3>
-                    <p><a href="tel:+447936342380" style="font-size:1.5rem; font-weight:700; color:var(--primary);">07936 342380</a></p>
+                    <h3><i class="fas fa-phone-alt"></i> Call Us</h3>
+                    <p><a href="tel:+447936342380" style="font-size:1.5rem;font-weight:700;color:var(--primary);">07936 342380</a></p>
                     <p><a href="tel:+441621331606" style="color:var(--text);">01621 331606</a></p>
                     <h3 style="margin-top:1.5rem;"><i class="fas fa-envelope"></i> Email</h3>
                     <p>info@treepros.co.uk</p>
-                    <div class="badge" style="display:inline-block; background:#2ecc7120; margin-top:1rem;"><i class="fas fa-check-circle"></i> Free no-obligation quote</div>
+                    <div class="badge" style="display:inline-block;background:#2ecc7120;margin-top:1rem;"><i class="fas fa-check-circle"></i> Free no-obligation quote</div>
                 </div>
                 <div class="service-areas">
-                    <h3><i class="fas fa-map-marker-alt"></i> Areas we cover</h3>
+                    <h3><i class="fas fa-map-marker-alt"></i> Areas We Cover</h3>
                     <div class="area-list">
-                        <span class="area-tag">Colchester</span>
-                        <span class="area-tag">Chelmsford</span>
-                        <span class="area-tag">Maldon</span>
-                        <span class="area-tag">Braintree</span>
-                        <span class="area-tag">Ipswich</span>
-                        <span class="area-tag">Barking</span>
-                        <span class="area-tag">Basildon</span>
-                        <span class="area-tag">Benfleet</span>
-                        <span class="area-tag">Suffolk Coast</span>
-                        <span class="area-tag">Witham</span>
-                        <span class="area-tag">Tendring</span>
-                        <span class="area-tag">Uttlesford</span>
-                        <span class="area-tag">Brentwood</span>
-                        <span class="area-tag">Epping Forest</span>
+                        <span class="area-tag">Colchester</span><span class="area-tag">Chelmsford</span><span class="area-tag">Maldon</span>
+                        <span class="area-tag">Braintree</span><span class="area-tag">Ipswich</span><span class="area-tag">Barking</span>
+                        <span class="area-tag">Basildon</span><span class="area-tag">Benfleet</span><span class="area-tag">Witham</span>
+                        <span class="area-tag">Tendring</span><span class="area-tag">Brentwood</span><span class="area-tag">Epping Forest</span>
+                        <span class="area-tag">Sudbury</span><span class="area-tag">Clacton</span><span class="area-tag">Harwich</span>
                     </div>
-                    <p style="margin-top: 1.5rem; color: var(--text-muted); font-size: 0.85rem;"><i class="fas fa-check-circle" style="color:var(--primary);"></i> Fully covered: Essex & Suffolk — we travel to you!</p>
+                    <p style="margin-top:1.5rem;color:var(--text-muted);font-size:0.85rem;"><i class="fas fa-check-circle" style="color:var(--primary);"></i> Fully covered: Essex & Suffolk — we travel to you!</p>
                 </div>
             </div>
         </div>
-        <div style="text-align: center; margin-top: 2rem;">
-            <a href="tel:+447936342380" class="btn btn-call" style="padding: 1rem 2.5rem;"><i class="fas fa-phone"></i> Call Tree Pros Now</a>
+        <div style="text-align:center;margin-top:2rem;">
+            <a href="tel:+447936342380" class="btn btn-call" style="padding:1rem 2.5rem;"><i class="fas fa-phone"></i> Call Tree Pros Now</a>
         </div>
     </div>
 </section>
 
 <hr class="heartbeat">
 <footer>
-    <p><i class="fas fa-copyright"></i> Tree Pro's 2026 — Professional Tree Surgery Essex & Suffolk | Fully insured & NPTC qualified arborists</p>
-    <p style="margin-top: 0.5rem;">📍 Covering Colchester, Chelmsford, Braintree, Maldon, Ipswich & all surrounding areas</p>
-    <div style="margin-top: 1rem;">
-        <a href="#" style="color: var(--text-muted); margin: 0 0.5rem;">Privacy</a>
-        <a href="#" style="color: var(--text-muted); margin: 0 0.5rem;">Terms</a>
-    </div>
+    <p><i class="fas fa-copyright"></i> Tree Pro's 2026 — Professional Tree Surgery Essex & Suffolk</p>
+    <p style="margin-top:0.5rem;">NPTC qualified • Fully insured • Free quotes • 24/7 emergency call-out</p>
+    <div style="margin-top:1rem;"><a href="#" style="color:var(--text-muted);margin:0 0.5rem;">Privacy</a><a href="#" style="color:var(--text-muted);margin:0 0.5rem;">Terms</a></div>
 </footer>
-
-<div class="floating-phone">
-    <a href="tel:+447936342380"><i class="fas fa-phone-alt"></i></a>
-</div>
+<div class="floating-phone"><a href="tel:+447936342380"><i class="fas fa-phone-alt"></i></a></div>
 </body>
 </html>
