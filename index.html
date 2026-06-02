@@ -32,7 +32,6 @@
             --text-muted: #9aa4bf;
             --danger: #e74c3c;
             --danger-dark: #c0392b;
-            --warning: #f39c12;
             --border: #2a2f3a;
             --shadow: 0 20px 35px -12px rgba(0,0,0,0.5);
         }
@@ -46,7 +45,6 @@
             overflow-x: hidden;
         }
 
-        /* animated background gradient */
         .gradient-bg {
             position: fixed;
             top: 0;
@@ -57,17 +55,15 @@
             background: radial-gradient(circle at 10% 20%, #0f141c, #030507);
         }
 
-        /* modern navbar */
         .navbar {
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(10, 12, 16, 0.9);
+            background: rgba(10, 12, 16, 0.92);
             backdrop-filter: blur(16px);
             border-bottom: 1px solid rgba(46, 204, 113, 0.2);
             z-index: 1000;
             padding: 1rem 2rem;
-            transition: all 0.2s;
         }
         .nav-container {
             max-width: 1280px;
@@ -99,7 +95,7 @@
             border-radius: 40px;
             transition: 0.2s;
         }
-        .nav-links a:hover, .nav-links a.active {
+        .nav-links a:hover {
             background: rgba(46, 204, 113, 0.15);
             color: var(--primary);
         }
@@ -112,13 +108,11 @@
             border-left: 3px solid var(--danger);
         }
 
-        /* hero section */
         .hero {
             min-height: 95vh;
             display: flex;
             align-items: center;
             padding: 6rem 2rem 4rem;
-            position: relative;
         }
         .hero-container {
             max-width: 1280px;
@@ -156,10 +150,6 @@
             display: flex;
             gap: 2rem;
             margin: 1.5rem 0;
-        }
-        .stat {
-            display: flex;
-            flex-direction: column;
         }
         .stat-number {
             font-size: 1.8rem;
@@ -215,7 +205,6 @@
             border: 2px solid rgba(46,204,113,0.3);
         }
 
-        /* sections */
         section {
             padding: 5rem 2rem;
         }
@@ -248,7 +237,6 @@
             transition: 0.2s;
             border: 1px solid var(--border);
             text-align: center;
-            backdrop-filter: blur(4px);
         }
         .service-card:hover {
             transform: translateY(-8px);
@@ -269,7 +257,7 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 1.5rem;
-            margin: 2rem 0;
+            margin: 0 2rem 2rem;
         }
         .badge {
             background: var(--surface);
@@ -298,13 +286,33 @@
             margin-top: 2rem;
             border: 1px solid var(--border);
         }
-        .location-grid {
-            columns: 2;
-            column-gap: 2rem;
-            background: rgba(0,0,0,0.3);
-            padding: 1.5rem;
-            border-radius: 28px;
-            margin: 1rem 0;
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: space-between;
+        }
+        .contact-details h3 {
+            margin-bottom: 0.5rem;
+        }
+        .contact-details p {
+            margin-bottom: 0.5rem;
+        }
+        .service-areas {
+            flex: 2;
+        }
+        .area-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+        .area-tag {
+            background: rgba(46, 204, 113, 0.1);
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
         }
         footer {
             background: #06080c;
@@ -323,15 +331,15 @@
             .btn-group {
                 justify-content: center;
             }
-            .location-grid {
-                columns: 1;
-            }
             .navbar {
                 padding: 1rem;
             }
             .nav-container {
                 flex-direction: column;
                 gap: 0.8rem;
+            }
+            .contact-info {
+                flex-direction: column;
             }
         }
         .floating-phone {
@@ -387,7 +395,7 @@
     <div class="nav-container">
         <div class="logo">🌳 TREE PROS</div>
         <div class="nav-links">
-            <a href="#home" class="active">Home</a>
+            <a href="#home">Home</a>
             <a href="#services">Services</a>
             <a href="#reviews">Reviews</a>
             <a href="#contact">Contact</a>
@@ -406,9 +414,9 @@
             <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 5.0 (87 reviews)</div>
             <p style="font-size: 1.05rem; color: #cbd5e1;">Professional tree surgery across Colchester, Chelmsford, Braintree, Maldon & all of Essex & Suffolk. Free quotes, fully insured.</p>
             <div class="hero-stats">
-                <div class="stat"><span class="stat-number">500+</span><span>Trees Removed</span></div>
-                <div class="stat"><span class="stat-number">12 Yrs</span><span>Experience</span></div>
-                <div class="stat"><span class="stat-number">100%</span><span>Satisfaction</span></div>
+                <div><span class="stat-number">500+</span><br>Trees Removed</div>
+                <div><span class="stat-number">12 Yrs</span><br>Experience</div>
+                <div><span class="stat-number">100%</span><br>Satisfaction</div>
             </div>
             <div class="btn-group">
                 <a href="tel:+447936342380" class="btn btn-call"><i class="fas fa-phone"></i> 07936 342380</a>
@@ -431,7 +439,7 @@
 </div>
 
 <!-- Services section -->
-<section id="services" style="background: rgba(0,0,0,0.4);">
+<section id="services" style="background: rgba(0,0,0,0.3);">
     <div class="container">
         <div class="section-header">
             <h2>Expert Tree Care Services</h2>
@@ -448,7 +456,7 @@
     </div>
 </section>
 
-<!-- Testimonial area (static slider look) -->
+<!-- Testimonial section -->
 <section id="reviews">
     <div class="container">
         <div class="section-header">
@@ -456,60 +464,49 @@
             <p>Rated Excellent on Google — real reviews from Essex & Suffolk.</p>
         </div>
         <div class="testimonial-slider">
-            <div class="testimonial"><i class="fas fa-quote-left" style="color:var(--primary);"></i><p style="margin-top: 10px;">“Amazing service, removed a massive oak next to my house with zero damage. Cleaned everything. Highly recommend.”</p><h4>— Sarah, Colchester</h4><div class="stars">★★★★★</div></div>
-            <div class="testimonial"><i class="fas fa-quote-left" style="color:var(--primary);"></i><p style="margin-top: 10px;">“Fast response for storm damage. Professional team, great price. Will use again.”</p><h4>— Michael, Chelmsford</h4><div class="stars">★★★★★</div></div>
-            <div class="testimonial"><i class="fas fa-quote-left" style="color:var(--primary);"></i><p style="margin-top: 10px;">“Stump grinding was immaculate, even left the area better than before. 10/10.”</p><h4>— Linda, Suffolk</h4><div class="stars">★★★★★</div></div>
+            <div class="testimonial"><i class="fas fa-quote-left" style="color:var(--primary);"></i><p style="margin-top: 10px;">"Amazing service, removed a massive oak next to my house with zero damage. Cleaned everything. Highly recommend."</p><h4>— Sarah, Colchester</h4><div class="stars">★★★★★</div></div>
+            <div class="testimonial"><i class="fas fa-quote-left" style="color:var(--primary);"></i><p style="margin-top: 10px;">"Fast response for storm damage. Professional team, great price. Will use again."</p><h4>— Michael, Chelmsford</h4><div class="stars">★★★★★</div></div>
+            <div class="testimonial"><i class="fas fa-quote-left" style="color:var(--primary);"></i><p style="margin-top: 10px;">"Stump grinding was immaculate, even left the area better than before. 10/10."</p><h4>— Linda, Suffolk</h4><div class="stars">★★★★★</div></div>
         </div>
     </div>
 </section>
 
-<!-- Contact & location listing (page1 style but modern) -->
+<!-- Contact section - clean, no spammy links -->
 <section id="contact" style="background: #07090e;">
     <div class="container">
         <div class="section-header">
             <h2>Request a Free Quote</h2>
-            <p>Call or fill the form — we’ll respond within 2 hours.</p>
+            <p>Call or email — we'll respond within 2 hours.</p>
         </div>
         <div class="contact-panel">
-            <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: space-between;">
-                <div style="flex:1; min-width: 200px;">
+            <div class="contact-info">
+                <div class="contact-details">
                     <h3><i class="fas fa-phone-alt"></i> Call direct</h3>
-                    <p><a href="tel:+447936342380" style="font-size:1.5rem; font-weight:700;">07936 342380</a></p>
-                    <p><a href="tel:+441621331606">01621 331606</a></p>
-                    <h3 style="margin-top:1rem;"><i class="fas fa-envelope"></i> Email</h3>
+                    <p><a href="tel:+447936342380" style="font-size:1.5rem; font-weight:700; color:var(--primary);">07936 342380</a></p>
+                    <p><a href="tel:+441621331606" style="color:var(--text);">01621 331606</a></p>
+                    <h3 style="margin-top:1.5rem;"><i class="fas fa-envelope"></i> Email</h3>
                     <p>info@treepros.co.uk</p>
-                    <div class="badge" style="display:inline-block; background:#2ecc7120;"><i class="fas fa-check-circle"></i> Free no-obligation quote</div>
+                    <div class="badge" style="display:inline-block; background:#2ecc7120; margin-top:1rem;"><i class="fas fa-check-circle"></i> Free no-obligation quote</div>
                 </div>
-                <div style="flex:2">
-                    <h3>🌍 Locations we cover — Page 1</h3>
-                    <div class="location-grid">
-                        <ul style="list-style:none;">
-                            <li><a href="#">tree-surgery-abridge-essex</a></li>
-                            <li><a href="#">tree-surgery-althorne-essex</a></li>
-                            <li><a href="#">tree-surgery-ardleigh-essex</a></li>
-                            <li><a href="#">tree-surgery-arkesden-essex</a></li>
-                            <li><a href="#">tree-surgery-aveley-essex</a></li>
-                            <li><a href="#">tree-surgery-barking-essex</a></li>
-                            <li><a href="#">tree-surgery-basildon-essex</a></li>
-                            <li><a href="#">tree-surgery-battlesbridge-essex</a></li>
-                            <li><a href="#">tree-felling-abridge-essex</a></li>
-                            <li><a href="#">tree-felling-basildon-essex</a></li>
-                        </ul>
-                        <ul style="list-style:none;">
-                            <li><a href="#">stump-removal-abridge-essex</a></li>
-                            <li><a href="#">stump-removal-ardleigh-essex</a></li>
-                            <li><a href="#">hedge-trimming-abridge-essex</a></li>
-                            <li><a href="#">hedge-trimming-basildon-essex</a></li>
-                            <li><a href="#">tree-surgery-benfleet-essex</a></li>
-                            <li><a href="#">tree-felling-belchamp-st-paul-essex</a></li>
-                            <li><a href="#">stump-removal-battlesbridge-essex</a></li>
-                            <li><a href="#">hedge-trimming-belchamp-st-paul</a></li>
-                        </ul>
+                <div class="service-areas">
+                    <h3><i class="fas fa-map-marker-alt"></i> Areas we cover</h3>
+                    <div class="area-list">
+                        <span class="area-tag">Colchester</span>
+                        <span class="area-tag">Chelmsford</span>
+                        <span class="area-tag">Maldon</span>
+                        <span class="area-tag">Braintree</span>
+                        <span class="area-tag">Ipswich</span>
+                        <span class="area-tag">Barking</span>
+                        <span class="area-tag">Basildon</span>
+                        <span class="area-tag">Benfleet</span>
+                        <span class="area-tag">Suffolk Coast</span>
+                        <span class="area-tag">Witham</span>
+                        <span class="area-tag">Tendring</span>
+                        <span class="area-tag">Uttlesford</span>
+                        <span class="area-tag">Brentwood</span>
+                        <span class="area-tag">Epping Forest</span>
                     </div>
-                    <div class="pagination-links" style="margin-top:1rem;">
-                        <a href="#" style="background:var(--primary); padding:0.3rem 1rem; border-radius:40px; color:#000;">← Prev</a>
-                        <a href="#" style="background:var(--surface); padding:0.3rem 1rem; border-radius:40px;">Next →</a>
-                    </div>
+                    <p style="margin-top: 1.5rem; color: var(--text-muted); font-size: 0.85rem;"><i class="fas fa-check-circle" style="color:var(--primary);"></i> Fully covered: Essex & Suffolk — we travel to you!</p>
                 </div>
             </div>
         </div>
