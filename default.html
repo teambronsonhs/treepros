@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <title>Tree Pros | Professional Tree Surgery Essex & Suffolk</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tree Surgery Essex, Tree Surgery Suffolk. Expert tree felling, stump grinding, hedge trimming, site clearance and woodland management by NPTC qualified arborists. Free quotes.">
+    <meta name="keywords" content="tree surgery Essex, tree surgery Suffolk, tree felling Essex, stump grinding Suffolk, hedge trimming, site clearance, woodland management, arborist Essex, tree removal Colchester">
+    <meta name="geo.region" content="GB-ESS;GB-SFK">
+    <meta name="geo.placename" content="Essex, Suffolk">
+    <meta name="geo.position" content="51.895927;0.891874">
+    <meta name="ICBM" content="51.895927, 0.891874">
+    <link rel="canonical" href="https://treepros.co.uk">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232ecc71'%3E%3Cpath d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/%3E%3C/svg%3E">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2ecc71;
+            --primary-dark: #25a55a;
+            --primary-glow: rgba(46, 204, 113, 0.25);
+            --dark-bg: #0c0c10;
+            --surface: #18181e;
+            --surface-light: #22222a;
+            --text: #ededee;
+            --text-muted: #9ca3af;
+            --danger: #e63946;
+            --danger-dark: #c1121f;
+            --border: #2a2a33;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--dark-bg);
+            color: var(--text);
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        /* navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(12, 12, 16, 0.92);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            padding: 0.9rem 1.5rem;
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .nav-link {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            padding: 0.5rem 1.2rem;
+            border-radius: 100px;
+            transition: all 0.2s;
+        }
+
+        .nav-link:hover {
+            background: rgba(46, 204, 113, 0.12);
+            color: var(--primary);
+        }
+
+        /* sections */
+        section {
+            padding: 5rem 1.5rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* hero */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(125deg, rgba(0,0,0,0.85) 0%, rgba(0,20,10,0.8) 100%), url('https://placehold.co/2000x1200/1a2e1f/2ecc71?text=Tree+Pros+Essex');
+            background-size: cover;
+            background-position: center;
+            padding-top: 4rem;
+        }
+
+        .hero-grid {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 2.5rem;
+        }
+
+        .hero-image img {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--primary);
+            box-shadow: 0 20px 35px -12px black;
+            background: #1e3a2a;
+        }
+
+        .hero-content h1 {
+            font-size: 2.7rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content h1 span {
+            color: var(--primary);
+        }
+
+        .stars {
+            color: #fbbf24;
+            font-weight: 600;
+            margin: 0.5rem 0;
+        }
+
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            border-radius: 60px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: #0a0a0c;
+        }
+
+        .btn-primary:hover {
+            background: white;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .btn-call {
+            background: var(--danger);
+            color: white;
+        }
+
+        .btn-call:hover {
+            background: var(--danger-dark);
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            border: 1.5px solid var(--primary);
+            color: var(--primary);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: black;
+        }
+
+        /* cards */
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .section-sub {
+            text-align: center;
+            color: var(--text-muted);
+            max-width: 720px;
+            margin: 0 auto 2rem auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1.8rem;
+            margin: 2.5rem 0;
+        }
+
+        .service-card {
+            background: var(--surface);
+            border-radius: 28px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid var(--border);
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 30px -12px black;
+            border-color: var(--primary-glow);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            background: #1f2c1d;
+        }
+
+        .service-card h3 {
+            padding: 1.2rem;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.3rem;
+        }
+
+        .review-badge {
+            background: var(--surface-light);
+            border-radius: 32px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            text-align: center;
+            border: 1px solid rgba(46,204,113,0.3);
+        }
+
+        .contact-panel {
+            background: var(--surface);
+            border-radius: 32px;
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 700px;
+            border: 1px solid var(--border);
+        }
+
+        .location-grid {
+            columns: 2;
+            column-gap: 2rem;
+            background: rgba(0,0,0,0.3);
+            padding: 1.5rem;
+            border-radius: 24px;
+            margin: 1.5rem 0;
+        }
+
+        .location-grid ul {
+            list-style: none;
+        }
+
+        .location-grid li {
+            margin-bottom: 0.5rem;
+        }
+
+        .location-grid a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+
+        .location-grid a:hover {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+
+        .pagination-links {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .pagination-links a {
+            background: var(--surface-light);
+            padding: 0.6rem 1.5rem;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 500;
+            margin: 0 0.3rem;
+        }
+
+        .fb-placeholder {
+            background: #1877f2;
+            border-radius: 24px;
+            padding: 1rem;
+            text-align: center;
+            max-width: 500px;
+            margin: 1.5rem auto;
+        }
+
+        .fb-placeholder a {
+            color: white;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            padding: 2rem 1rem;
+            border-top: 1px solid var(--border);
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 700px) {
+            .hero-grid {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-content h1 {
+                font-size: 1.9rem;
+            }
+            .btn-group {
+                justify-content: center;
+            }
+            .location-grid {
+                columns: 1;
+            }
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+
+        hr.heartbeat {
+            margin: 10px auto;
+            width: 90%;
+            border: none;
+            height: 2px;
+            background: #27272e;
+            position: relative;
+        }
+        hr.heartbeat::before {
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 2px;
+            background: var(--primary);
+            animation: pulseLine 4s infinite linear;
+        }
+        @keyframes pulseLine {
+            0% { left: 0%; }
+            50% { left: calc(100% - 6px); }
+            100% { left: 0%; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#why-us" class="nav-link">Why Choose Us</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#contact" class="nav-link">Get Quote</a>
+        <a href="tel:+447936342380" class="nav-link" style="color: var(--primary);">📞 Call Now</a>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+    <div class="container hero-grid">
+        <div class="hero-image">
+            <img src="https://placehold.co/400x400/2a3e2b/ffffff?text=Tree+Pros" alt="Tree Surgery Expert">
+        </div>
+        <div class="hero-content">
+            <h1>Your Local <span>Tree Pro's</span><br>Expert Tree Surgery & Care</h1>
+            <div class="stars">★★★★★ 5.0 (50+ reviews)</div>
+            <p style="font-size: 1.05rem; margin: 1rem 0;">Professional tree surgery in Colchester, Maldon, Chelmsford, Braintree and across Essex & Suffolk. NPTC qualified, fully insured, BS3998 standards.</p>
+            <div class="btn-group">
+                <a href="tel:+447936342380" class="btn btn-call">📞 07936 342380</a>
+                <a href="tel:+441621331606" class="btn btn-call">📞 01621 331606</a>
+                <a href="#contact" class="btn btn-primary">Free Quote →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us -->
+<section id="why-us" style="background: var(--dark-bg);">
+    <div class="container">
+        <h2 class="section-title">Why Choose Tree Pros?</h2>
+        <p class="section-sub">Safe, professional, eco-friendly tree surgery. We follow British Standards (BS3998) and deliver excellence from the first call to site clearance.</p>
+        <div class="review-badge">
+            🌳 <strong>NPTC Qualified Arborists</strong> &nbsp;|&nbsp; 🔥 <strong>Emergency Storm Damage</strong> &nbsp;|&nbsp; 📋 <strong>Free no-obligation quotes</strong>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 1.2rem; justify-content: center; margin-top: 1rem;">
+            <span style="background: var(--surface-light); padding: 0.5rem 1.2rem; border-radius: 40px;">Tree Felling</span>
+            <span style="background: var(--surface-light); padding: 0.5rem 1.2rem; border-radius: 40px;">Crown Reduction</span>
+            <span style="background: var(--surface-light); padding: 0.5rem 1.2rem; border-radius: 40px;">Stump Grinding</span>
+            <span style="background: var(--surface-light); padding: 0.5rem 1.2rem; border-radius: 40px;">Hedge & Conifer Trim</span>
+            <span style="background: var(--surface-light); padding: 0.5rem 1.2rem; border-radius: 40px;">Site Clearance</span>
+            <span style="background: var(--surface-light); padding: 0.5rem 1.2rem; border-radius: 40px;">Woodland Management</span>
+        </div>
+        <div class="btn-group" style="justify-content: center; margin-top: 2rem;">
+            <a href="#services" class="btn btn-primary">Explore all services</a>
+            <a href="tel:+447936342380" class="btn btn-outline">Call for advice</a>
+        </div>
+    </div>
+</section>
+
+<!-- Services Grid Section -->
+<section id="services" style="background: var(--surface);">
+    <div class="container">
+        <h2 class="section-title">Our Expert Tree Care Services</h2>
+        <p class="section-sub">From domestic gardens to commercial sites — we handle every project with precision and care.</p>
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="https://placehold.co/600x400/2e4a2a/ffffff?text=Tree+Felling" alt="Tree felling Essex">
+                <h3>🌲 Tree Felling</h3>
+            </div>
+            <div class="service-card">
+                <img src="https://placehold.co/600x400/2c4f2c/ffffff?text=Hedge+Trimming" alt="Hedge trimming">
+                <h3>✂️ Hedge Trimming</h3>
+            </div>
+            <div class="service-card">
+                <img src="https://placehold.co/600x400/2b4b2b/ffffff?text=Conifer+Thinning" alt="Conifer thinning">
+                <h3>🌲 Conifer Thinning</h3>
+            </div>
+            <div class="service-card">
+                <img src="https://placehold.co/600x400/2a4628/ffffff?text=Stump+Grinding" alt="Stump removal Suffolk">
+                <h3>⚙️ Stump Grinding</h3>
+            </div>
+            <div class="service-card">
+                <img src="https://placehold.co/600x400/2d532d/ffffff?text=Crown+Reduction" alt="Crown reduction">
+                <h3>🍃 Crown Reduction</h3>
+            </div>
+            <div class="service-card">
+                <img src="https://placehold.co/600x400/255030/ffffff?text=Emergency+Tree+Care" alt="Emergency tree work">
+                <h3>⚠️ Emergency Storm Damage</h3>
+            </div>
+        </div>
+        <!-- Facebook integration (static but functional) -->
+        <div class="fb-placeholder">
+            📘 <a href="https://www.facebook.com/treeprosuk" target="_blank" rel="noopener">Tree Pro's UK on Facebook</a> — follow for seasonal tips & offers
+        </div>
+        <div style="text-align: center; margin: 2rem 0 0;">
+            <a href="#contact" class="btn btn-primary">📋 Request Your Free Estimate</a>
+        </div>
+    </div>
+</section>
+
+<!-- Contact + Location Area (original page1 content structured) -->
+<section id="contact" style="background: var(--dark-bg);">
+    <div class="container">
+        <h2 class="section-title">Get in Touch — Free Consultation</h2>
+        <p class="section-sub">Ready to improve your trees? Call or email for a fast, transparent quote. We cover all Essex and Suffolk.</p>
+        <div class="contact-panel">
+            <div style="text-align: center;">
+                <p><strong>📞 Call us direct:</strong> <a href="tel:+447936342380" style="font-size: 1.4rem;">07936 342380</a> | <a href="tel:+441621331606">01621 331606</a></p>
+                <p>✉️ <strong>Email:</strong> info@treepros.co.uk</p>
+                <hr style="margin: 1.2rem 0; border-color: #2a2a33;">
+                <h3 style="color: var(--primary);">🌍 Services and Locations we cover — Page 1</h3>
+                <div class="location-grid">
+                    <ul>
+                        <li><a href="#">tree-surgery-abridge-essex</a></li>
+                        <li><a href="#">tree-surgery-althorne-essex</a></li>
+                        <li><a href="#">tree-surgery-ardleigh-essex</a></li>
+                        <li><a href="#">tree-surgery-arkesden-essex</a></li>
+                        <li><a href="#">tree-surgery-aveley-essex</a></li>
+                        <li><a href="#">tree-surgery-barking-essex</a></li>
+                        <li><a href="#">tree-surgery-basildon-essex</a></li>
+                        <li><a href="#">tree-surgery-battlesbridge-essex</a></li>
+                        <li><a href="#">tree-surgery-belchamp-st-paul-essex</a></li>
+                        <li><a href="#">tree-surgery-benfleet-essex</a></li>
+                        <li><a href="#">tree-felling-abridge-essex</a></li>
+                        <li><a href="#">tree-felling-althorne-essex</a></li>
+                        <li><a href="#">tree-felling-ardleigh-essex</a></li>
+                        <li><a href="#">tree-felling-arkesden-essex</a></li>
+                        <li><a href="#">tree-felling-aveley-essex</a></li>
+                        <li><a href="#">tree-felling-barking-essex</a></li>
+                        <li><a href="#">tree-felling-basildon-essex</a></li>
+                        <li><a href="#">tree-felling-battlesbridge-essex</a></li>
+                        <li><a href="#">tree-felling-belchamp-st-paul-essex</a></li>
+                        <li><a href="#">tree-felling-benfleet-essex</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">stump-removal-abridge-essex</a></li>
+                        <li><a href="#">stump-removal-althorne-essex</a></li>
+                        <li><a href="#">stump-removal-ardleigh-essex</a></li>
+                        <li><a href="#">stump-removal-arkesden-essex</a></li>
+                        <li><a href="#">stump-removal-aveley-essex</a></li>
+                        <li><a href="#">stump-removal-barking-essex</a></li>
+                        <li><a href="#">stump-removal-basildon-essex</a></li>
+                        <li><a href="#">stump-removal-battlesbridge-essex</a></li>
+                        <li><a href="#">stump-removal-belchamp-st-paul-essex</a></li>
+                        <li><a href="#">stump-removal-benfleet-essex</a></li>
+                        <li><a href="#">hedge-trimming-abridge-essex</a></li>
+                        <li><a href="#">hedge-trimming-althorne-essex</a></li>
+                        <li><a href="#">hedge-trimming-ardleigh-essex</a></li>
+                        <li><a href="#">hedge-trimming-arkesden-essex</a></li>
+                        <li><a href="#">hedge-trimming-aveley-essex</a></li>
+                        <li><a href="#">hedge-trimming-barking-essex</a></li>
+                        <li><a href="#">hedge-trimming-basildon-essex</a></li>
+                        <li><a href="#">hedge-trimming-battlesbridge-essex</a></li>
+                        <li><a href="#">hedge-trimming-belchamp-st-paul-essex</a></li>
+                        <li><a href="#">hedge-trimming-benfleet-essex</a></li>
+                    </ul>
+                </div>
+                <div class="pagination-links">
+                    <a href="#" style="background: var(--primary); color:#111;">← Prev</a>
+                    <a href="#">Next →</a>
+                </div>
+                <p style="margin-top: 1rem;">📌 <em>Serving Colchester, Chelmsford, Braintree, Maldon, Ipswich and surrounding areas. Call today!</em></p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 1rem;">
+            <a href="tel:+447936342380" class="btn btn-call" style="padding: 1rem 2.5rem;">📞 Call Tree Pros Now: 07936 342380</a>
+        </div>
+    </div>
+</section>
+
+<hr class="heartbeat">
+
+<footer>
+    <p>© Tree Pro's 2026 — Professional Tree Surgery Essex & Suffolk | Fully insured & NPTC qualified | Free estimates</p>
+    <p style="margin-top: 0.5rem;">📍 Based in Colchester, covering Essex & Suffolk | email: info@treepros.co.uk</p>
+</footer>
+
+<!-- small note: static & ready for GitHub pages — just rename to index.html and push -->
+</body>
+</html>
