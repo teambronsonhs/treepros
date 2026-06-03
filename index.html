@@ -3,7 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TREEPROS | Tree Surgery Essex & Suffolk</title>
+    <title>TREEPROS | Professional Tree Surgery Essex & Suffolk</title>
+    <meta name="description" content="Professional tree surgery in Essex & Suffolk. NPTC qualified arborists. Free quotes, 24/7 emergency call-out. Tree felling, stump grinding, hedge trimming.">
+    <meta name="keywords" content="tree surgery Essex, tree surgery Suffolk, tree felling, stump grinding, hedge trimming, arborist">
+    <meta name="author" content="TREEPROS">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://treepros.co.uk">
+    
+    <!-- Facebook SDK -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v22.0"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <style>
         * {
             margin: 0;
@@ -12,86 +24,94 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Inter', sans-serif;
             background: #0a0c10;
-            color: white;
-            line-height: 1.4;
+            color: #e8edf2;
+            line-height: 1.5;
         }
 
         /* Navigation */
-        .nav {
+        .navbar {
             position: fixed;
             top: 0;
             width: 100%;
             background: #0a0c10;
-            padding: 10px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            gap: 8px;
+            z-index: 1000;
+            padding: 1rem 2rem;
             border-bottom: 1px solid #2ecc71;
-            z-index: 100;
         }
 
-        .nav a {
-            color: white;
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #fff;
             text-decoration: none;
-            background: #1a1e26;
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 500;
         }
 
-        .emergency {
-            background: #e74c3c;
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: bold;
-        }
-
-        /* Hero with IMAGE */
-        .hero {
-            padding: 80px 16px 40px;
-            text-align: center;
-            position: relative;
-            background: #0a0c10;
-        }
-        
-        .hero-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('mike.jpg');
-            background-size: cover;
-            background-position: center 25%;
-            opacity: 0.2;
-            z-index: 0;
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .badge {
-            background: rgba(46, 204, 113, 0.2);
-            display: inline-block;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 11px;
+        .logo span {
             color: #2ecc71;
-            margin-bottom: 16px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: #e8edf2;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            transition: 0.2s;
+        }
+
+        .nav-links a:hover {
+            background: #2ecc71;
+            color: #0a0c10;
+        }
+
+        .emergency-badge {
+            background: #e74c3c;
+            padding: 0.4rem 1rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 7rem 2rem 4rem;
+            text-align: center;
+            background: linear-gradient(135deg, #0a2a1a, #0a0c10);
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(46, 204, 113, 0.2);
+            padding: 0.3rem 1rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            color: #2ecc71;
+            margin-bottom: 1rem;
         }
 
         h1 {
-            font-size: 28px;
+            font-size: 3rem;
             font-weight: 800;
-            margin-bottom: 8px;
+            margin-bottom: 0.5rem;
         }
 
         h1 span {
@@ -99,53 +119,50 @@
         }
 
         .stars {
+            margin: 0.5rem 0;
+            font-size: 1rem;
             color: #ffcd4a;
-            margin: 12px 0;
-            font-size: 14px;
         }
 
         .hero p {
-            font-size: 13px;
-            color: #ddd;
-            max-width: 500px;
+            font-size: 1rem;
+            color: #aaa;
+            max-width: 600px;
             margin: 0 auto;
         }
 
-        /* Stats */
         .stats {
             display: flex;
             justify-content: center;
-            gap: 24px;
-            margin: 20px 0;
+            gap: 3rem;
+            margin: 2rem 0;
         }
 
         .stat-number {
-            font-size: 22px;
+            font-size: 2rem;
             font-weight: 800;
             color: #2ecc71;
         }
 
         .stat-label {
-            font-size: 11px;
-            color: #888;
+            font-size: 0.8rem;
+            color: #aaa;
         }
 
-        /* Buttons */
-        .buttons {
+        .btn-group {
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
-            gap: 12px;
-            margin: 20px 0;
+            gap: 1rem;
+            margin-top: 1.5rem;
         }
 
         .btn {
-            padding: 10px 20px;
+            padding: 0.8rem 1.8rem;
             border-radius: 50px;
-            text-decoration: none;
             font-weight: 600;
-            font-size: 13px;
-            display: inline-block;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: 0.2s;
         }
 
         .btn-call {
@@ -153,166 +170,263 @@
             color: white;
         }
 
-        .btn-primary {
-            background: #2ecc71;
-            color: black;
+        .btn-call:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
         }
 
-        /* Badges row */
+        .btn-primary {
+            background: #2ecc71;
+            color: #0a0c10;
+        }
+
+        .btn-primary:hover {
+            background: white;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 1px solid #2ecc71;
+            color: #2ecc71;
+        }
+
+        .btn-outline:hover {
+            background: #2ecc71;
+            color: #0a0c10;
+        }
+
+        /* Trust Badges */
         .badges {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 8px;
-            padding: 16px;
+            gap: 1rem;
+            padding: 1.5rem;
             background: #0f1218;
         }
 
-        .badge-item {
+        .badge {
             background: #1a1e26;
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 11px;
+            padding: 0.4rem 1.2rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
         }
 
-        /* Section */
+        /* Sections */
         .section {
-            padding: 40px 16px;
+            padding: 4rem 2rem;
         }
 
-        .section h2 {
-            font-size: 22px;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
             text-align: center;
-            margin-bottom: 8px;
+            margin-bottom: 0.5rem;
         }
 
         .section-sub {
             text-align: center;
             color: #aaa;
-            font-size: 12px;
-            margin-bottom: 24px;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
         }
 
-        /* Services */
-        .services {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
         }
 
-        .service {
+        .service-card {
             background: #151a22;
-            padding: 16px;
             border-radius: 20px;
+            padding: 1.5rem;
+            text-align: center;
             border-left: 3px solid #2ecc71;
+            transition: 0.2s;
         }
 
-        .service h3 {
-            font-size: 16px;
-            margin-bottom: 4px;
+        .service-card:hover {
+            transform: translateY(-3px);
         }
 
-        .service p {
-            font-size: 12px;
+        .service-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .service-card p {
+            font-size: 0.8rem;
             color: #aaa;
         }
 
         /* Testimonials */
-        .testimonials {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
         }
 
-        .testimonial {
+        .testimonial-card {
             background: #151a22;
-            padding: 16px;
             border-radius: 20px;
+            padding: 1.5rem;
             border-left: 3px solid #2ecc71;
         }
 
-        .testimonial .stars {
-            font-size: 11px;
-            margin-bottom: 6px;
+        .testimonial-card .stars {
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
         }
 
-        .testimonial p {
-            font-size: 12px;
-            margin: 8px 0;
+        .testimonial-card p {
+            font-size: 0.85rem;
+            margin: 0.8rem 0;
         }
 
-        .testimonial h4 {
-            font-size: 11px;
+        .testimonial-card h4 {
+            font-size: 0.8rem;
+            color: #2ecc71;
+        }
+
+        /* Blog Section */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .blog-card {
+            background: #151a22;
+            border-radius: 20px;
+            padding: 1.5rem;
+            transition: 0.2s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            border: 1px solid #2a2f3a;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-3px);
+            border-color: #2ecc71;
+        }
+
+        .blog-icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+            color: #2ecc71;
+        }
+
+        .blog-card p {
+            font-size: 0.8rem;
+            color: #aaa;
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: 0.8rem;
+            font-size: 0.75rem;
             color: #2ecc71;
         }
 
         /* Contact */
         .contact-panel {
             background: #151a22;
-            border-radius: 20px;
-            padding: 20px;
+            border-radius: 24px;
+            padding: 2rem;
         }
 
-        .contact-item {
-            margin-bottom: 20px;
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
         }
 
-        .contact-item h3 {
-            font-size: 16px;
-            margin-bottom: 8px;
+        .contact-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
             color: #2ecc71;
         }
 
         .contact-buttons {
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 0.8rem;
+            margin-top: 0.5rem;
         }
 
         .contact-btn {
             background: #e74c3c;
             color: white;
-            padding: 10px 16px;
+            padding: 0.7rem 1.2rem;
             border-radius: 50px;
             text-decoration: none;
             text-align: center;
             font-weight: 600;
-            font-size: 14px;
+            font-size: 0.9rem;
+            transition: 0.2s;
+        }
+
+        .contact-btn:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
         }
 
         .contact-btn-email {
             background: #2ecc71;
-            color: black;
+            color: #0a0c10;
+        }
+
+        .contact-btn-email:hover {
+            background: white;
         }
 
         .areas {
             display: flex;
             flex-wrap: wrap;
-            gap: 6px;
-            margin-top: 8px;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
         }
 
         .area-tag {
             background: #1a1e26;
-            padding: 4px 10px;
+            padding: 0.3rem 0.8rem;
             border-radius: 20px;
-            font-size: 11px;
+            font-size: 0.7rem;
         }
 
         .fb-container {
             background: #151a22;
             border-radius: 20px;
-            padding: 16px;
+            padding: 1.5rem;
             text-align: center;
-            margin-top: 16px;
+            margin-top: 1.5rem;
         }
 
         footer {
             text-align: center;
-            padding: 20px;
-            font-size: 11px;
-            color: #666;
+            padding: 2rem;
             border-top: 1px solid #1a1e26;
+            font-size: 0.7rem;
+            color: #666;
         }
 
         footer a {
@@ -320,69 +434,71 @@
             text-decoration: none;
         }
 
-        /* FLOATING PHONE BUTTON - MATCHES THE RED BUTTONS */
         .floating-phone {
             position: fixed;
             bottom: 20px;
             right: 20px;
             background: #e74c3c;
-            width: 55px;
-            height: 55px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
             z-index: 99;
-            transition: transform 0.2s;
-        }
-
-        .floating-phone:hover {
-            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
         }
 
         .floating-phone a {
             color: white;
-            font-size: 24px;
+            font-size: 1.5rem;
             text-decoration: none;
         }
 
-        /* Desktop */
-        @media (min-width: 768px) {
-            .services {
-                display: grid;
+        /* Responsive */
+        @media (max-width: 900px) {
+            .services-grid, .testimonial-grid, .blog-grid {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 16px;
             }
-            .testimonials {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 16px;
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
             }
-            .contact-buttons {
-                flex-direction: row;
+            h1 {
+                font-size: 2rem;
+            }
+            .hero {
+                padding: 6rem 1rem 3rem;
+            }
+            .navbar {
+                padding: 0.8rem 1rem;
+            }
+            .nav-container {
+                flex-direction: column;
+            }
+            .stats {
+                gap: 1.5rem;
+            }
+            .stat-number {
+                font-size: 1.5rem;
             }
         }
 
-        @media (min-width: 1024px) {
-            .services {
-                grid-template-columns: repeat(3, 1fr);
+        @media (max-width: 600px) {
+            .services-grid, .testimonial-grid, .blog-grid {
+                grid-template-columns: 1fr;
             }
-        }
-        
-        @media (max-width: 768px) {
-            .hero-bg {
-                background-position: center 35%;
-                opacity: 0.15;
+            .btn-group {
+                flex-direction: column;
+                align-items: center;
             }
-            .floating-phone {
-                width: 48px;
-                height: 48px;
-                bottom: 15px;
-                right: 15px;
+            .btn {
+                width: 100%;
+                max-width: 250px;
+                text-align: center;
             }
-            .floating-phone a {
-                font-size: 20px;
+            .section {
+                padding: 2rem 1rem;
             }
         }
     </style>
@@ -390,132 +506,174 @@
 <body>
 
 <!-- Navigation -->
-<div class="nav">
-    <a href="#home">Home</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-    <a href="tel:+447936342380">📞 Call</a>
-    <span class="emergency">24/7</span>
+<div class="navbar">
+    <div class="nav-container">
+        <a href="#home" class="logo">TREE<span>PROS</span></a>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact</a>
+            <a href="tel:+447936342380">📞 Call</a>
+        </div>
+        <div class="emergency-badge">24/7 RESPONSE</div>
+    </div>
 </div>
 
-<!-- Hero Section with IMAGE -->
+<!-- Hero Section -->
 <div class="hero" id="home">
-    <div class="hero-bg"></div>
-    <div class="hero-content">
-        <div class="badge">MASTER ARBORISTS • BS3998</div>
-        <h1>Elite <span>Tree Surgery</span><br>Essex & Suffolk</h1>
-        <div class="stars">★★★★★ 4.9 (187 reviews)</div>
-        <p>Drone assessments, 24/7 emergency, zero-impact removal. Trusted by estates and homeowners.</p>
-        
-        <div class="stats">
-            <div><div class="stat-number">750+</div><div class="stat-label">Projects</div></div>
-            <div><div class="stat-number">14 YRS</div><div class="stat-label">Expertise</div></div>
-            <div><div class="stat-number">5★</div><div class="stat-label">Service</div></div>
-        </div>
-        
-        <div class="buttons">
-            <a href="tel:+447936342380" class="btn btn-call">📞 07936 342380</a>
-            <a href="#contact" class="btn btn-primary">Free Quote</a>
-        </div>
+    <div class="hero-badge">MASTER ARBORISTS • BS3998</div>
+    <h1>Elite <span>Tree Surgery</span><br>Essex & Suffolk</h1>
+    <div class="stars">★★★★★ 4.9 (187 reviews)</div>
+    <p>Drone assessments, 24/7 emergency, zero-impact removal. Trusted by estates and homeowners.</p>
+    
+    <div class="stats">
+        <div><div class="stat-number">750+</div><div class="stat-label">Projects</div></div>
+        <div><div class="stat-number">14 YRS</div><div class="stat-label">Expertise</div></div>
+        <div><div class="stat-number">5★</div><div class="stat-label">Service</div></div>
+    </div>
+    
+    <div class="btn-group">
+        <a href="tel:+447936342380" class="btn btn-call">📞 07936 342380</a>
+        <a href="#contact" class="btn btn-primary">Free Quote</a>
+        <a href="#services" class="btn btn-outline">Our Services →</a>
     </div>
 </div>
 
 <!-- Trust Badges -->
 <div class="badges">
-    <span class="badge-item">✓ BS3998</span>
-    <span class="badge-item">🌿 Eco-Friendly</span>
-    <span class="badge-item">🔧 Modern Equipment</span>
-    <span class="badge-item">⏰ 24/7 Emergency</span>
+    <span class="badge">✓ BS3998 Standards</span>
+    <span class="badge">🌿 Eco-Friendly</span>
+    <span class="badge">🔧 Modern Equipment</span>
+    <span class="badge">⏰ 24/7 Emergency</span>
 </div>
 
 <!-- Services Section -->
 <div class="section" id="services">
-    <h2>Precision Tree Care</h2>
-    <div class="section-sub">Certified, fully insured, and ecologically responsible.</div>
-    
-    <div class="services">
-        <div class="service"><h3>🌲 Tree Felling</h3><p>Controlled dismantling, any size.</p></div>
-        <div class="service"><h3>✂️ Hedge Trimming</h3><p>Precision shaping and height reduction.</p></div>
-        <div class="service"><h3>⚙️ Stump Grinding</h3><p>Grind stumps below ground level.</p></div>
-        <div class="service"><h3>🧹 Site Clearance</h3><p>Overgrowth and vegetation removal.</p></div>
-        <div class="service"><h3>🌿 Crown Reduction</h3><p>Reduce canopy for light and safety.</p></div>
-        <div class="service"><h3>🍃 Woodland Management</h3><p>Conservation and estate care.</p></div>
+    <div class="container">
+        <h2 class="section-title">Precision Tree Care</h2>
+        <div class="section-sub">Certified, fully insured, and ecologically responsible.</div>
+        
+        <div class="services-grid">
+            <div class="service-card"><div class="service-icon">🌲</div><h3>Tree Felling</h3><p>Controlled dismantling, any size, any location.</p></div>
+            <div class="service-card"><div class="service-icon">✂️</div><h3>Hedge Mastery</h3><p>Conifers, beech, hornbeam — sculpted perfection.</p></div>
+            <div class="service-card"><div class="service-icon">⚙️</div><h3>Stump Eraser</h3><p>Grinding down to 12 inches below soil.</p></div>
+            <div class="service-card"><div class="service-icon">🧹</div><h3>Site Clearance</h3><p>Overgrowth, ivy, scrub — total restoration.</p></div>
+            <div class="service-card"><div class="service-icon">🌿</div><h3>Crown Architecture</h3><p>Reduction, lifting, reshaping for health.</p></div>
+            <div class="service-card"><div class="service-icon">🍃</div><h3>Woodland Management</h3><p>Conservation & commercial estate care.</p></div>
+        </div>
+    </div>
+</div>
+
+<!-- Blog Section (NEW) -->
+<div class="section" id="blog" style="background: #0f1218;">
+    <div class="container">
+        <h2 class="section-title">Tree Care Insights</h2>
+        <div class="section-sub">Expert advice from local arborists</div>
+        
+        <div class="blog-grid">
+            <a href="blog-colchester-tree-surgery.html" class="blog-card">
+                <div class="blog-icon">📍</div>
+                <h3>Tree Surgery in Colchester</h3>
+                <p>Complete guide to professional tree care in Colchester — costs, services, and local expertise.</p>
+                <span class="read-more">Read more →</span>
+            </a>
+            <a href="blog-cost-guide.htm" class="blog-card">
+                <div class="blog-icon">💰</div>
+                <h3>Tree Surgery Cost Guide 2026</h3>
+                <p>Transparent pricing for tree felling, stump grinding, and hedge trimming in Essex & Suffolk.</p>
+                <span class="read-more">Read more →</span>
+            </a>
+            <a href="blog-prune-guide.htm" class="blog-card">
+                <div class="blog-icon">📅</div>
+                <h3>When to Prune Trees in Essex</h3>
+                <p>Seasonal calendar for oak, apple, cherry, and conifer trees. Includes TPO advice.</p>
+                <span class="read-more">Read more →</span>
+            </a>
+        </div>
     </div>
 </div>
 
 <!-- Testimonials -->
-<div class="section" style="background: #0f1218;">
-    <h2>Trusted by Essex & Suffolk</h2>
-    <div class="testimonials">
-        <div class="testimonial"><div class="stars">★★★★★</div><p>“Fell a dangerous oak near my house — they were surgical and left the garden spotless.”</p><h4>— Andrew, Colchester</h4></div>
-        <div class="testimonial"><div class="stars">★★★★★</div><p>“Emergency call-out after a storm. Within 2 hours they removed the fallen branch. Heroes.”</p><h4>— Linda, Chelmsford</h4></div>
-        <div class="testimonial"><div class="stars">★★★★★</div><p>“Stump grinding was flawless. Highly recommend TREEPROS.”</p><h4>— Mark, Suffolk</h4></div>
+<div class="section">
+    <div class="container">
+        <h2 class="section-title">Trusted by Essex & Suffolk</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-card"><div class="stars">★★★★★</div><p>“Fell a dangerous oak near my house — they were surgical and left the garden spotless.”</p><h4>— Andrew, Colchester</h4></div>
+            <div class="testimonial-card"><div class="stars">★★★★★</div><p>“Emergency call-out after a storm. Within 2 hours they removed the fallen branch. Heroes.”</p><h4>— Linda, Chelmsford</h4></div>
+            <div class="testimonial-card"><div class="stars">★★★★★</div><p>“Stump grinding was flawless, they even seeded the area. Highly recommend TREEPROS.”</p><h4>— Mark, Suffolk</h4></div>
+        </div>
     </div>
 </div>
 
 <!-- Contact Section -->
 <div class="section" id="contact">
-    <h2>Get Your Free Quote Today</h2>
-    <div class="section-sub">Call or email — we respond within 2 hours</div>
-    
-    <div class="contact-panel">
-        <div class="contact-item">
-            <h3>📞 Call Us</h3>
-            <div class="contact-buttons">
-                <a href="tel:+447936342380" class="contact-btn">📞 07936 342380</a>
-                <a href="tel:+441621331606" class="contact-btn">📞 01621 331606</a>
+    <div class="container">
+        <h2 class="section-title">Get Your Free Quote Today</h2>
+        <div class="section-sub">Call or email — we respond within 2 hours</div>
+        
+        <div class="contact-panel">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>📞 Call Us</h3>
+                    <div class="contact-buttons">
+                        <a href="tel:+447936342380" class="contact-btn">📞 07936 342380</a>
+                        <a href="tel:+441621331606" class="contact-btn">📞 01621 331606</a>
+                    </div>
+                </div>
+                <div class="contact-info">
+                    <h3>✉️ Email Us</h3>
+                    <a href="mailto:info@treepros.co.uk" class="contact-btn contact-btn-email">✉️ info@treepros.co.uk</a>
+                </div>
+            </div>
+            
+            <div class="contact-info" style="margin-top: 1.5rem;">
+                <h3>📍 Areas We Cover</h3>
+                <div class="areas">
+                    <span class="area-tag">Colchester</span>
+                    <span class="area-tag">Chelmsford</span>
+                    <span class="area-tag">Maldon</span>
+                    <span class="area-tag">Braintree</span>
+                    <span class="area-tag">Ipswich</span>
+                    <span class="area-tag">Basildon</span>
+                    <span class="area-tag">Witham</span>
+                    <span class="area-tag">Tendring</span>
+                    <span class="area-tag">Brentwood</span>
+                    <span class="area-tag">Sudbury</span>
+                    <span class="area-tag">Clacton</span>
+                    <span class="area-tag">Harwich</span>
+                </div>
             </div>
         </div>
         
-        <div class="contact-item">
-            <h3>✉️ Email Us</h3>
-            <a href="mailto:info@treepros.co.uk" class="contact-btn contact-btn-email">✉️ info@treepros.co.uk</a>
-        </div>
-        
-        <div class="contact-item">
-            <h3>📍 Areas We Cover</h3>
-            <div class="areas">
-                <span class="area-tag">Colchester</span>
-                <span class="area-tag">Chelmsford</span>
-                <span class="area-tag">Maldon</span>
-                <span class="area-tag">Braintree</span>
-                <span class="area-tag">Ipswich</span>
-                <span class="area-tag">Basildon</span>
-                <span class="area-tag">Witham</span>
-                <span class="area-tag">Tendring</span>
-                <span class="area-tag">Brentwood</span>
-                <span class="area-tag">Sudbury</span>
-                <span class="area-tag">Clacton</span>
-                <span class="area-tag">Harwich</span>
+        <!-- Facebook -->
+        <div class="fb-container">
+            <div class="fb-page" data-href="https://www.facebook.com/Treeprosuk/" data-tabs="timeline" data-width="500" data-height="300" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false">
+                <blockquote cite="https://www.facebook.com/Treeprosuk/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Treeprosuk/">TREEPROS UK</a></blockquote>
             </div>
         </div>
-    </div>
-    
-    <!-- Facebook -->
-    <div class="fb-container">
-        <div class="fb-page" data-href="https://www.facebook.com/Treeprosuk/" data-tabs="timeline" data-width="400" data-height="250" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false">
-            <blockquote cite="https://www.facebook.com/Treeprosuk/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Treeprosuk/">TREEPROS UK</a></blockquote>
+        
+        <div style="text-align:center; margin-top: 1.5rem;">
+            <a href="tel:+447936342380" class="btn btn-call" style="padding: 0.8rem 2rem;">📞 Call TREEPROS Now</a>
         </div>
-    </div>
-    
-    <div style="text-align:center; margin-top: 20px;">
-        <a href="tel:+447936342380" class="btn btn-call" style="padding: 12px 24px;">📞 Call TREEPROS Now</a>
     </div>
 </div>
 
 <footer>
-    <p>© TREEPROS 2026 — Professional Tree Surgery Essex & Suffolk</p>
-    <p>NPTC qualified | Fully insured | Free quotes</p>
-    <p><a href="https://www.facebook.com/Treeprosuk/" target="_blank">Facebook</a></p>
+    <p>© TREEPROS 2026 — Professional Tree Surgery Essex & Suffolk | NPTC qualified | Fully insured</p>
+    <p>📍 Covering Colchester, Chelmsford, Braintree, Maldon, Ipswich & all surrounding areas</p>
+    <p>
+        <a href="blog-colchester-tree-surgery.html">Colchester Tree Surgery</a> | 
+        <a href="blog-cost-guide.htm">Cost Guide</a> | 
+        <a href="blog-prune-guide.htm">Pruning Calendar</a> | 
+        <a href="https://www.facebook.com/Treeprosuk/" target="_blank">Facebook</a>
+    </p>
 </footer>
 
-<!-- Floating Phone Button - MATCHES THE RED BUTTONS -->
+<!-- Floating Phone Button -->
 <div class="floating-phone">
     <a href="tel:+447936342380">📞</a>
 </div>
-
-<!-- Facebook SDK -->
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v22.0"></script>
 
 </body>
 </html>
