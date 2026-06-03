@@ -48,7 +48,6 @@
     </script>
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
     <style>
         * {
@@ -60,7 +59,6 @@
         :root {
             --primary: #2ecc71;
             --primary-dark: #25a559;
-            --primary-glow: rgba(46, 204, 113, 0.3);
             --dark: #0a0c10;
             --dark-card: #13161c;
             --surface: #1e2229;
@@ -69,7 +67,6 @@
             --danger: #e74c3c;
             --danger-dark: #c0392b;
             --border: #2a2f3a;
-            --shadow: 0 20px 35px -12px rgba(0,0,0,0.5);
         }
 
         body {
@@ -90,21 +87,6 @@
             z-index: -2;
             background: radial-gradient(circle at 20% 30%, #0b1812, #020304);
         }
-        .bg-orb::before {
-            content: "";
-            position: absolute;
-            width: 80%;
-            height: 80%;
-            top: 10%;
-            left: 10%;
-            background: radial-gradient(circle, rgba(46,204,113,0.08) 0%, rgba(0,0,0,0) 70%);
-            filter: blur(60px);
-            animation: pulseGlow 12s infinite alternate;
-        }
-        @keyframes pulseGlow {
-            0% { opacity: 0.3; transform: scale(0.9);}
-            100% { opacity: 0.8; transform: scale(1.2);}
-        }
 
         /* modern glassmorphism nav */
         .navbar {
@@ -116,7 +98,6 @@
             background: rgba(5, 7, 10, 0.85);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(46, 204, 113, 0.25);
-            transition: all 0.3s;
         }
         .nav-container {
             max-width: 1400px;
@@ -133,7 +114,6 @@
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            letter-spacing: -0.02em;
         }
         .nav-links {
             display: flex;
@@ -149,7 +129,7 @@
             transition: 0.2s;
             font-size: 0.9rem;
         }
-        .nav-links a:hover, .nav-links a.active {
+        .nav-links a:hover {
             background: rgba(46, 204, 113, 0.2);
             color: #2ecc71;
         }
@@ -159,7 +139,6 @@
             border-radius: 80px;
             font-weight: 700;
             font-size: 0.8rem;
-            backdrop-filter: blur(4px);
         }
 
         /* hero with background image */
@@ -179,8 +158,8 @@
             height: 100%;
             background-image: url('mike.jpg');
             background-size: cover;
-            background-position: center 20%;
-            opacity: 0.35;
+            background-position: center 25%;
+            opacity: 0.3;
             z-index: -1;
         }
         .hero-grid {
@@ -200,13 +179,11 @@
             font-weight: 600;
             color: #2ecc71;
             margin-bottom: 1rem;
-            backdrop-filter: blur(4px);
         }
         .hero h1 {
             font-size: 3.5rem;
             font-weight: 800;
             line-height: 1.2;
-            letter-spacing: -0.02em;
             background: linear-gradient(to right, #ffffff, #b0ffc0);
             -webkit-background-clip: text;
             background-clip: text;
@@ -218,14 +195,22 @@
             background-clip: text;
             color: transparent;
         }
+        /* SIMPLE STAR RATING - NO FONTS */
         .star-rating {
-            color: #ffcd4a;
             margin: 1rem 0;
             font-size: 1.2rem;
-            letter-spacing: 2px;
+            color: #ffcd4a;
         }
-        .star-rating i {
-            margin-right: 2px;
+        .star-rating .star-filled {
+            color: #ffcd4a;
+        }
+        .star-rating .star-empty {
+            color: #444;
+        }
+        .star-rating span {
+            color: #ccc;
+            margin-left: 8px;
+            font-size: 0.9rem;
         }
         .hero-stats {
             display: flex;
@@ -270,7 +255,6 @@
             border: 1.5px solid #2ecc71;
             color: #2ecc71;
             background: rgba(0,0,0,0.3);
-            backdrop-filter: blur(4px);
         }
         .btn-outline:hover {
             background: #2ecc71;
@@ -299,7 +283,6 @@
             font-weight: 700;
             text-align: center;
             margin-bottom: 1rem;
-            letter-spacing: -0.01em;
         }
         .section-sub {
             text-align: center;
@@ -324,7 +307,6 @@
         .service-card:hover {
             transform: translateY(-8px);
             border-color: #2ecc71;
-            box-shadow: 0 20px 30px -12px black;
         }
         .service-icon {
             font-size: 2.8rem;
@@ -363,6 +345,11 @@
             max-width: 340px;
             border-left: 4px solid #2ecc71;
         }
+        .testimonial-card .stars {
+            color: #ffcd4a;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
         .contact-panel {
             background: linear-gradient(135deg, #13161c, #0c0f15);
             border-radius: 40px;
@@ -391,7 +378,6 @@
         .contact-btn-phone, .contact-btn-email {
             background: #e74c3c;
             color: white;
-            box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
         }
         .contact-btn-phone:hover, .contact-btn-email:hover {
             background: #c0392b;
@@ -431,10 +417,6 @@
             justify-content: center;
             box-shadow: 0 8px 20px black;
             z-index: 99;
-            transition: 0.2s;
-        }
-        .floating-phone:hover {
-            transform: scale(1.05);
         }
         .floating-phone a {
             color: white;
@@ -452,7 +434,6 @@
             border-radius: 28px;
             padding: 1.5rem;
             text-align: center;
-            backdrop-filter: blur(8px);
             margin-top: 2rem;
         }
         .fb-page-container h3 {
@@ -460,10 +441,10 @@
             color: #2ecc71;
         }
 
-        /* Mobile fix for background image - FACE VISIBLE */
+        /* Mobile fixes */
         @media (max-width: 768px) {
             .hero::before {
-                background-position: center 65%;
+                background-position: center 55%;
                 background-size: cover;
             }
             .hero {
@@ -473,39 +454,23 @@
             .hero h1 {
                 font-size: 2rem;
             }
-            .star-rating {
-                font-size: 0.9rem;
-            }
-        }
-
-        /* mobile responsive for other elements */
-        @media (max-width: 900px) {
             .navbar { padding: 0.8rem 1rem; }
             .nav-container { flex-direction: column; gap: 0.8rem; text-align: center; }
-            .nav-links { justify-content: center; flex-wrap: wrap; gap: 0.4rem; }
+            .nav-links { justify-content: center; }
             .nav-links a { padding: 0.4rem 0.8rem; font-size: 0.8rem; }
-            .emergency-floating { font-size: 0.7rem; padding: 0.3rem 0.8rem; }
             .logo { font-size: 1.5rem; }
-            .hero-stats { justify-content: center; gap: 1.2rem; }
+            .hero-stats { gap: 1.2rem; }
             .stat-item .stat-number { font-size: 1.4rem; }
-            .btn-group { justify-content: center; }
             .btn { padding: 0.7rem 1.2rem; font-size: 0.85rem; }
             .section-title { font-size: 1.8rem; }
-            .services-grid { grid-template-columns: 1fr; gap: 1.2rem; }
+            .services-grid { grid-template-columns: 1fr; }
             .service-card { padding: 1.2rem; }
-            .trust-badges { gap: 0.6rem; margin: 0 1rem 1rem; }
-            .badge { font-size: 0.7rem; padding: 0.25rem 0.8rem; }
             .testimonial-grid { flex-direction: column; align-items: center; }
             .testimonial-card { max-width: 100%; }
-            .contact-panel { padding: 1.5rem; }
             .contact-buttons { flex-direction: column; align-items: stretch; }
             .contact-btn { justify-content: center; }
-            .area-list { justify-content: center; }
             .floating-phone { width: 48px; height: 48px; bottom: 15px; right: 15px; }
-            .floating-phone a { font-size: 1.4rem; }
             section { padding: 3rem 1rem; }
-            .container { padding: 0; }
-            .fb-page-container { padding: 1rem; }
         }
     </style>
 </head>
@@ -516,7 +481,7 @@
     <div class="nav-container">
         <div class="logo">🌳 TREEPROS</div>
         <div class="nav-links">
-            <a href="#home" class="active">Home</a>
+            <a href="#home">Home</a>
             <a href="#services">Services</a>
             <a href="blog-cost-guide.htm">Cost Guide</a>
             <a href="blog-prune-guide.htm">Pruning Guide</a>
@@ -534,8 +499,8 @@
             <div class="hero-badge"><i class="fas fa-crown"></i> MASTER ARBORISTS • BS3998</div>
             <h1>Elite <span>Tree Surgery</span><br>Essex & Suffolk</h1>
             <div class="star-rating">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                <span style="color: #ccc; margin-left: 5px;">4.9 (187 reviews)</span>
+                <span class="star-filled">★★★★★</span>
+                <span>4.9 (187 reviews)</span>
             </div>
             <p style="font-size: 1rem; color: #ccd6f0;">Drone assessments, 24/7 emergency, zero-impact removal. Trusted by estates and homeowners.</p>
             <div class="hero-stats">
@@ -566,12 +531,12 @@
         <div class="section-title">Precision Tree Care</div>
         <div class="section-sub">Certified, fully insured, and ecologically responsible.</div>
         <div class="services-grid">
-            <div class="service-card"><div class="service-icon"><i class="fas fa-tree"></i></div><h3>Tree Felling</h3><p>Controlled dismantling, any size, any location.</p></div>
-            <div class="service-card"><div class="service-icon"><i class="fas fa-cut"></i></div><h3>Hedge Mastery</h3><p>Conifers, beech, hornbeam — sculpted perfection.</p></div>
-            <div class="service-card"><div class="service-icon"><i class="fas fa-cogs"></i></div><h3>Stump Eraser</h3><p>Grinding down to 12 inches below soil.</p></div>
-            <div class="service-card"><div class="service-icon"><i class="fas fa-brush"></i></div><h3>Site Clearance</h3><p>Overgrowth, ivy, scrub — total restoration.</p></div>
-            <div class="service-card"><div class="service-icon"><i class="fas fa-seedling"></i></div><h3>Crown Architecture</h3><p>Reduction, lifting, reshaping for health.</p></div>
-            <div class="service-card"><div class="service-icon"><i class="fas fa-leaf"></i></div><h3>Woodland Mgmt</h3><p>Conservation & commercial estate care.</p></div>
+            <div class="service-card"><div class="service-icon">🌲</div><h3>Tree Felling</h3><p>Controlled dismantling, any size, any location.</p></div>
+            <div class="service-card"><div class="service-icon">✂️</div><h3>Hedge Mastery</h3><p>Conifers, beech, hornbeam — sculpted perfection.</p></div>
+            <div class="service-card"><div class="service-icon">⚙️</div><h3>Stump Eraser</h3><p>Grinding down to 12 inches below soil.</p></div>
+            <div class="service-card"><div class="service-icon">🧹</div><h3>Site Clearance</h3><p>Overgrowth, ivy, scrub — total restoration.</p></div>
+            <div class="service-card"><div class="service-icon">🌿</div><h3>Crown Architecture</h3><p>Reduction, lifting, reshaping for health.</p></div>
+            <div class="service-card"><div class="service-icon">🍃</div><h3>Woodland Mgmt</h3><p>Conservation & commercial estate care.</p></div>
         </div>
     </div>
 </section>
@@ -581,9 +546,9 @@
     <div class="container">
         <div class="section-title">Trusted by Essex & Suffolk</div>
         <div class="testimonial-grid">
-            <div class="testimonial-card"><i class="fas fa-star" style="color:#ffcd4a;"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><p style="margin: 1rem 0;">“Fell a dangerous oak near my house — they were surgical and left the garden spotless.”</p><h4>— Andrew, Colchester</h4></div>
-            <div class="testimonial-card"><i class="fas fa-star" style="color:#ffcd4a;"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><p style="margin: 1rem 0;">“Emergency call-out after a storm. Within 2 hours they removed the fallen branch. Heroes.”</p><h4>— Linda, Chelmsford</h4></div>
-            <div class="testimonial-card"><i class="fas fa-star" style="color:#ffcd4a;"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><p style="margin: 1rem 0;">“Stump grinding was flawless, they even seeded the area. Highly recommend TREEPROS.”</p><h4>— Mark, Suffolk</h4></div>
+            <div class="testimonial-card"><div class="stars">★★★★★</div><p style="margin: 0.5rem 0;">“Fell a dangerous oak near my house — they were surgical and left the garden spotless.”</p><h4>— Andrew, Colchester</h4></div>
+            <div class="testimonial-card"><div class="stars">★★★★★</div><p style="margin: 0.5rem 0;">“Emergency call-out after a storm. Within 2 hours they removed the fallen branch. Heroes.”</p><h4>— Linda, Chelmsford</h4></div>
+            <div class="testimonial-card"><div class="stars">★★★★★</div><p style="margin: 0.5rem 0;">“Stump grinding was flawless, they even seeded the area. Highly recommend TREEPROS.”</p><h4>— Mark, Suffolk</h4></div>
         </div>
     </div>
 </section>
@@ -595,20 +560,20 @@
         <div class="section-sub">Call or email — we respond within 2 hours</div>
         <div class="contact-panel">
             <div class="contact-info-text">
-                <h3><i class="fas fa-phone-alt"></i> Call Us</h3>
+                <h3>📞 Call Us</h3>
                 <div class="contact-buttons">
-                    <a href="tel:+447936342380" class="contact-btn contact-btn-phone"><i class="fas fa-phone-alt"></i> 07936 342380</a>
-                    <a href="tel:+441621331606" class="contact-btn contact-btn-phone"><i class="fas fa-phone-alt"></i> 01621 331606</a>
+                    <a href="tel:+447936342380" class="contact-btn contact-btn-phone">📞 07936 342380</a>
+                    <a href="tel:+441621331606" class="contact-btn contact-btn-phone">📞 01621 331606</a>
                 </div>
             </div>
             <div class="contact-info-text">
-                <h3><i class="fas fa-envelope"></i> Email Us</h3>
+                <h3>✉️ Email Us</h3>
                 <div class="contact-buttons">
-                    <a href="mailto:info@treepros.co.uk" class="contact-btn contact-btn-email"><i class="fas fa-envelope"></i> info@treepros.co.uk</a>
+                    <a href="mailto:info@treepros.co.uk" class="contact-btn contact-btn-email">✉️ info@treepros.co.uk</a>
                 </div>
             </div>
             <div class="contact-info-text">
-                <h3><i class="fas fa-map-marker-alt"></i> Areas We Cover</h3>
+                <h3>📍 Areas We Cover</h3>
                 <div class="area-list">
                     <span class="area-tag">Colchester</span><span class="area-tag">Chelmsford</span><span class="area-tag">Maldon</span>
                     <span class="area-tag">Braintree</span><span class="area-tag">Ipswich</span><span class="area-tag">Basildon</span>
@@ -620,7 +585,7 @@
         
         <!-- Facebook Page Plugin -->
         <div class="fb-page-container">
-            <h3><i class="fab fa-facebook"></i> Follow Us on Facebook</h3>
+            <h3>📘 Follow Us on Facebook</h3>
             <div class="fb-page" 
                  data-href="https://www.facebook.com/Treeprosuk/" 
                  data-tabs="timeline" 
@@ -637,23 +602,23 @@
         </div>
         
         <div style="text-align:center; margin-top: 2rem;">
-            <a href="tel:+447936342380" class="btn btn-call" style="padding: 1rem 2rem;"><i class="fas fa-phone"></i> Call TREEPROS Now</a>
+            <a href="tel:+447936342380" class="btn btn-call" style="padding: 1rem 2rem;">📞 Call TREEPROS Now</a>
         </div>
     </div>
 </section>
 
 <footer>
-    <p><i class="fas fa-copyright"></i> TREEPROS 2026 — Professional Tree Surgery Essex & Suffolk | NPTC qualified | Fully insured</p>
+    <p>© TREEPROS 2026 — Professional Tree Surgery Essex & Suffolk | NPTC qualified | Fully insured</p>
     <p style="margin-top: 0.5rem;">📍 Covering Colchester, Chelmsford, Braintree, Maldon, Ipswich & all surrounding areas</p>
     <div style="margin-top: 1rem;">
         <a href="blog-cost-guide.htm" style="color: #2ecc71;">Cost Guide</a> | 
         <a href="blog-prune-guide.htm" style="color: #2ecc71;">Pruning Calendar</a> |
-        <a href="https://www.facebook.com/Treeprosuk/" target="_blank" style="color: #2ecc71;" rel="noopener"><i class="fab fa-facebook"></i> Facebook</a>
+        <a href="https://www.facebook.com/Treeprosuk/" target="_blank" style="color: #2ecc71;">Facebook</a>
     </div>
 </footer>
 
 <div class="floating-phone">
-    <a href="tel:+447936342380"><i class="fas fa-phone-alt"></i></a>
+    <a href="tel:+447936342380">📞</a>
 </div>
 
 </body>
