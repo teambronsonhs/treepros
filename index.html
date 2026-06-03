@@ -358,12 +358,48 @@
             margin-top: 2rem;
             border: 1px solid var(--border);
         }
-        .contact-info {
+        .contact-buttons {
             display: flex;
             flex-wrap: wrap;
-            gap: 2rem;
-            justify-content: space-between;
+            gap: 1rem;
+            margin-top: 1rem;
+            justify-content: flex-start;
+        }
+        .contact-btn {
+            display: inline-flex;
             align-items: center;
+            gap: 10px;
+            padding: 1rem 1.8rem;
+            border-radius: 60px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.25s;
+            font-size: 1rem;
+        }
+        .contact-btn-phone {
+            background: #e74c3c;
+            color: white;
+            box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+        }
+        .contact-btn-phone:hover {
+            background: #c0392b;
+            transform: translateY(-3px);
+        }
+        .contact-btn-email {
+            background: #e74c3c;
+            color: white;
+            box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+        }
+        .contact-btn-email:hover {
+            background: #c0392b;
+            transform: translateY(-3px);
+        }
+        .contact-info-text {
+            margin-bottom: 1rem;
+        }
+        .contact-info-text h3 {
+            color: #2ecc71;
+            margin-bottom: 0.5rem;
         }
         .area-list {
             display: flex;
@@ -443,8 +479,9 @@
             .badge { font-size: 0.7rem; padding: 0.25rem 0.8rem; }
             .testimonial-grid { flex-direction: column; align-items: center; }
             .testimonial-card { max-width: 100%; }
-            .contact-panel { padding: 1.2rem; }
-            .contact-info { flex-direction: column; text-align: center; gap: 1rem; }
+            .contact-panel { padding: 1.5rem; }
+            .contact-buttons { flex-direction: column; align-items: stretch; }
+            .contact-btn { justify-content: center; }
             .area-list { justify-content: center; }
             .floating-phone { width: 48px; height: 48px; bottom: 15px; right: 15px; }
             .floating-phone a { font-size: 1.4rem; }
@@ -539,22 +576,26 @@
         <div class="section-title">Get Your Free Quote Today</div>
         <div class="section-sub">Call or email — we respond within 2 hours</div>
         <div class="contact-panel">
-            <div class="contact-info">
-                <div>
-                    <h3><i class="fas fa-phone-alt"></i> Call Us</h3>
-                    <p><a href="tel:+447936342380" style="font-size:1.4rem; font-weight:700; color:#2ecc71;">07936 342380</a></p>
-                    <p><a href="tel:+441621331606">01621 331606</a></p>
-                    <h3 style="margin-top:1rem;"><i class="fas fa-envelope"></i> Email</h3>
-                    <p>info@treepros.co.uk</p>
+            <div class="contact-info-text">
+                <h3><i class="fas fa-phone-alt"></i> Call Us</h3>
+                <div class="contact-buttons">
+                    <a href="tel:+447936342380" class="contact-btn contact-btn-phone"><i class="fas fa-phone-alt"></i> 07936 342380</a>
+                    <a href="tel:+441621331606" class="contact-btn contact-btn-phone"><i class="fas fa-phone-alt"></i> 01621 331606</a>
                 </div>
-                <div>
-                    <h3><i class="fas fa-map-marker-alt"></i> Areas We Cover</h3>
-                    <div class="area-list">
-                        <span class="area-tag">Colchester</span><span class="area-tag">Chelmsford</span><span class="area-tag">Maldon</span>
-                        <span class="area-tag">Braintree</span><span class="area-tag">Ipswich</span><span class="area-tag">Basildon</span>
-                        <span class="area-tag">Witham</span><span class="area-tag">Tendring</span><span class="area-tag">Brentwood</span>
-                        <span class="area-tag">Sudbury</span><span class="area-tag">Clacton</span><span class="area-tag">Harwich</span>
-                    </div>
+            </div>
+            <div class="contact-info-text">
+                <h3><i class="fas fa-envelope"></i> Email Us</h3>
+                <div class="contact-buttons">
+                    <a href="mailto:info@treepros.co.uk" class="contact-btn contact-btn-email"><i class="fas fa-envelope"></i> info@treepros.co.uk</a>
+                </div>
+            </div>
+            <div class="contact-info-text">
+                <h3><i class="fas fa-map-marker-alt"></i> Areas We Cover</h3>
+                <div class="area-list">
+                    <span class="area-tag">Colchester</span><span class="area-tag">Chelmsford</span><span class="area-tag">Maldon</span>
+                    <span class="area-tag">Braintree</span><span class="area-tag">Ipswich</span><span class="area-tag">Basildon</span>
+                    <span class="area-tag">Witham</span><span class="area-tag">Tendring</span><span class="area-tag">Brentwood</span>
+                    <span class="area-tag">Sudbury</span><span class="area-tag">Clacton</span><span class="area-tag">Harwich</span>
                 </div>
             </div>
         </div>
