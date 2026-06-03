@@ -456,7 +456,22 @@
             color: #2ecc71;
         }
 
-        /* mobile responsive */
+        /* Mobile fix for background image */
+        @media (max-width: 768px) {
+            .hero::before {
+                background-position: center 45%;
+                background-size: cover;
+            }
+            .hero {
+                min-height: 85vh;
+                padding: 6rem 1rem 3rem;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+
+        /* mobile responsive for other elements */
         @media (max-width: 900px) {
             .navbar { padding: 0.8rem 1rem; }
             .nav-container { flex-direction: column; gap: 0.8rem; text-align: center; }
@@ -464,8 +479,6 @@
             .nav-links a { padding: 0.4rem 0.8rem; font-size: 0.8rem; }
             .emergency-floating { font-size: 0.7rem; padding: 0.3rem 0.8rem; }
             .logo { font-size: 1.5rem; }
-            .hero { padding: 6rem 1rem 3rem; }
-            .hero h1 { font-size: 2rem; }
             .hero-stats { justify-content: center; gap: 1.2rem; }
             .stat-item .stat-number { font-size: 1.4rem; }
             .btn-group { justify-content: center; }
