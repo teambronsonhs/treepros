@@ -140,7 +140,7 @@
             font-size: 0.8rem;
         }
 
-        /* hero with background image */
+        /* hero with background image - DESKTOP ONLY */
         .hero {
             min-height: 90vh;
             display: flex;
@@ -194,7 +194,6 @@
             background-clip: text;
             color: transparent;
         }
-        /* SIMPLE STAR RATING - NO FONTS */
         .star-rating {
             margin: 1rem 0;
             font-size: 1.2rem;
@@ -435,13 +434,13 @@
             color: #2ecc71;
         }
 
-        /* Mobile fixes - FACE VISIBLE, SPACING FIXED */
+        /* Mobile fixes - REMOVE BACKGROUND IMAGE on mobile */
         @media (max-width: 768px) {
             .hero::before {
-                background-position: center 65%;
-                background-size: cover;
+                background-image: none;
             }
             .hero {
+                background: linear-gradient(135deg, #0a0c10, #1a2a1a);
                 min-height: 85vh;
                 padding: 6rem 1rem 4rem;
             }
