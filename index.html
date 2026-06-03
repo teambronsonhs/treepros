@@ -50,14 +50,32 @@
             border-radius: 20px;
             font-size: 12px;
             font-weight: bold;
-            display: inline-block;
-            line-height: 1.4;
         }
 
-        /* Hero */
+        /* Hero with IMAGE */
         .hero {
             padding: 80px 16px 40px;
             text-align: center;
+            position: relative;
+            background: #0a0c10;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('mike.jpg');
+            background-size: cover;
+            background-position: center 25%;
+            opacity: 0.2;
+            z-index: 0;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
         }
 
         .badge {
@@ -88,7 +106,7 @@
 
         .hero p {
             font-size: 13px;
-            color: #aaa;
+            color: #ddd;
             max-width: 500px;
             margin: 0 auto;
         }
@@ -302,6 +320,33 @@
             text-decoration: none;
         }
 
+        /* FLOATING PHONE BUTTON - MATCHES THE RED BUTTONS */
+        .floating-phone {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #e74c3c;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            z-index: 99;
+            transition: transform 0.2s;
+        }
+
+        .floating-phone:hover {
+            transform: scale(1.05);
+        }
+
+        .floating-phone a {
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+        }
+
         /* Desktop */
         @media (min-width: 768px) {
             .services {
@@ -324,6 +369,22 @@
                 grid-template-columns: repeat(3, 1fr);
             }
         }
+        
+        @media (max-width: 768px) {
+            .hero-bg {
+                background-position: center 35%;
+                opacity: 0.15;
+            }
+            .floating-phone {
+                width: 48px;
+                height: 48px;
+                bottom: 15px;
+                right: 15px;
+            }
+            .floating-phone a {
+                font-size: 20px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -337,22 +398,25 @@
     <span class="emergency">24/7</span>
 </div>
 
-<!-- Hero Section -->
+<!-- Hero Section with IMAGE -->
 <div class="hero" id="home">
-    <div class="badge">MASTER ARBORISTS • BS3998</div>
-    <h1>Elite <span>Tree Surgery</span><br>Essex & Suffolk</h1>
-    <div class="stars">★★★★★ 4.9 (187 reviews)</div>
-    <p>Drone assessments, 24/7 emergency, zero-impact removal. Trusted by estates and homeowners.</p>
-    
-    <div class="stats">
-        <div><div class="stat-number">750+</div><div class="stat-label">Projects</div></div>
-        <div><div class="stat-number">14 YRS</div><div class="stat-label">Expertise</div></div>
-        <div><div class="stat-number">5★</div><div class="stat-label">Service</div></div>
-    </div>
-    
-    <div class="buttons">
-        <a href="tel:+447936342380" class="btn btn-call">📞 07936 342380</a>
-        <a href="#contact" class="btn btn-primary">Free Quote</a>
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+        <div class="badge">MASTER ARBORISTS • BS3998</div>
+        <h1>Elite <span>Tree Surgery</span><br>Essex & Suffolk</h1>
+        <div class="stars">★★★★★ 4.9 (187 reviews)</div>
+        <p>Drone assessments, 24/7 emergency, zero-impact removal. Trusted by estates and homeowners.</p>
+        
+        <div class="stats">
+            <div><div class="stat-number">750+</div><div class="stat-label">Projects</div></div>
+            <div><div class="stat-number">14 YRS</div><div class="stat-label">Expertise</div></div>
+            <div><div class="stat-number">5★</div><div class="stat-label">Service</div></div>
+        </div>
+        
+        <div class="buttons">
+            <a href="tel:+447936342380" class="btn btn-call">📞 07936 342380</a>
+            <a href="#contact" class="btn btn-primary">Free Quote</a>
+        </div>
     </div>
 </div>
 
@@ -444,6 +508,11 @@
     <p>NPTC qualified | Fully insured | Free quotes</p>
     <p><a href="https://www.facebook.com/Treeprosuk/" target="_blank">Facebook</a></p>
 </footer>
+
+<!-- Floating Phone Button - MATCHES THE RED BUTTONS -->
+<div class="floating-phone">
+    <a href="tel:+447936342380">📞</a>
+</div>
 
 <!-- Facebook SDK -->
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v22.0"></script>
