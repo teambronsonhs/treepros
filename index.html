@@ -221,7 +221,11 @@
         .star-rating {
             color: #ffcd4a;
             margin: 1rem 0;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+        }
+        .star-rating i {
+            margin-right: 2px;
         }
         .hero-stats {
             display: flex;
@@ -456,10 +460,10 @@
             color: #2ecc71;
         }
 
-        /* Mobile fix for background image */
+        /* Mobile fix for background image - FACE VISIBLE */
         @media (max-width: 768px) {
             .hero::before {
-                background-position: center 45%;
+                background-position: center 65%;
                 background-size: cover;
             }
             .hero {
@@ -468,6 +472,9 @@
             }
             .hero h1 {
                 font-size: 2rem;
+            }
+            .star-rating {
+                font-size: 0.9rem;
             }
         }
 
@@ -526,7 +533,10 @@
         <div>
             <div class="hero-badge"><i class="fas fa-crown"></i> MASTER ARBORISTS • BS3998</div>
             <h1>Elite <span>Tree Surgery</span><br>Essex & Suffolk</h1>
-            <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 4.9 (187 reviews)</div>
+            <div class="star-rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <span style="color: #ccc; margin-left: 5px;">4.9 (187 reviews)</span>
+            </div>
             <p style="font-size: 1rem; color: #ccd6f0;">Drone assessments, 24/7 emergency, zero-impact removal. Trusted by estates and homeowners.</p>
             <div class="hero-stats">
                 <div class="stat-item"><span class="stat-number">750+</span><br>Projects</div>
