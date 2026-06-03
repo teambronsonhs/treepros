@@ -65,7 +65,6 @@
             --text: #f5f7fa;
             --text-muted: #9aa4bf;
             --danger: #e74c3c;
-            --danger-dark: #c0392b;
             --border: #2a2f3a;
         }
 
@@ -201,12 +200,6 @@
             font-size: 1.2rem;
             color: #ffcd4a;
         }
-        .star-rating .star-filled {
-            color: #ffcd4a;
-        }
-        .star-rating .star-empty {
-            color: #444;
-        }
         .star-rating span {
             color: #ccc;
             margin-left: 8px;
@@ -322,7 +315,7 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 1rem;
-            margin: 0 2rem 2rem;
+            margin: 2rem 2rem 3rem;
         }
         .badge {
             background: var(--surface);
@@ -421,6 +414,7 @@
         .floating-phone a {
             color: white;
             font-size: 1.6rem;
+            text-decoration: none;
         }
         footer {
             text-align: center;
@@ -441,15 +435,15 @@
             color: #2ecc71;
         }
 
-        /* Mobile fixes */
+        /* Mobile fixes - FACE VISIBLE, SPACING FIXED */
         @media (max-width: 768px) {
             .hero::before {
-                background-position: center 55%;
+                background-position: center 65%;
                 background-size: cover;
             }
             .hero {
                 min-height: 85vh;
-                padding: 6rem 1rem 3rem;
+                padding: 6rem 1rem 4rem;
             }
             .hero h1 {
                 font-size: 2rem;
@@ -465,6 +459,10 @@
             .section-title { font-size: 1.8rem; }
             .services-grid { grid-template-columns: 1fr; }
             .service-card { padding: 1.2rem; }
+            .trust-badges { 
+                gap: 0.6rem; 
+                margin: 1rem 1rem 2rem;
+            }
             .testimonial-grid { flex-direction: column; align-items: center; }
             .testimonial-card { max-width: 100%; }
             .contact-buttons { flex-direction: column; align-items: stretch; }
@@ -479,16 +477,16 @@
 
 <nav class="navbar">
     <div class="nav-container">
-        <div class="logo">🌳 TREEPROS</div>
+        <div class="logo">TREEPROS</div>
         <div class="nav-links">
             <a href="#home">Home</a>
             <a href="#services">Services</a>
             <a href="blog-cost-guide.htm">Cost Guide</a>
             <a href="blog-prune-guide.htm">Pruning Guide</a>
             <a href="#contact">Contact</a>
-            <a href="tel:+447936342380" style="color:#2ecc71;"><i class="fas fa-phone-alt"></i> Call</a>
+            <a href="tel:+447936342380" style="color:#2ecc71;">Call</a>
         </div>
-        <div class="emergency-floating"><i class="fas fa-tree"></i> 24/7 RESPONSE</div>
+        <div class="emergency-floating">24/7 RESPONSE</div>
     </div>
 </nav>
 
@@ -496,11 +494,10 @@
 <section id="home" class="hero">
     <div class="hero-grid">
         <div>
-            <div class="hero-badge"><i class="fas fa-crown"></i> MASTER ARBORISTS • BS3998</div>
+            <div class="hero-badge">MASTER ARBORISTS • BS3998</div>
             <h1>Elite <span>Tree Surgery</span><br>Essex & Suffolk</h1>
             <div class="star-rating">
-                <span class="star-filled">★★★★★</span>
-                <span>4.9 (187 reviews)</span>
+                ★★★★★ <span>4.9 (187 reviews)</span>
             </div>
             <p style="font-size: 1rem; color: #ccd6f0;">Drone assessments, 24/7 emergency, zero-impact removal. Trusted by estates and homeowners.</p>
             <div class="hero-stats">
@@ -509,8 +506,8 @@
                 <div class="stat-item"><span class="stat-number">5★</span><br>Service</div>
             </div>
             <div class="btn-group">
-                <a href="tel:+447936342380" class="btn btn-call"><i class="fas fa-headset"></i> 07936 342380</a>
-                <a href="#contact" class="btn btn-primary"><i class="fas fa-calendar-check"></i> Free Quote</a>
+                <a href="tel:+447936342380" class="btn btn-call">📞 07936 342380</a>
+                <a href="#contact" class="btn btn-primary">Free Quote</a>
                 <a href="#services" class="btn btn-outline">Explore →</a>
             </div>
         </div>
@@ -519,10 +516,10 @@
 
 <!-- Trust Badges -->
 <div class="trust-badges">
-    <span class="badge"><i class="fas fa-certificate"></i> BS3998 Standards</span>
-    <span class="badge"><i class="fas fa-leaf"></i> Eco-Friendly</span>
-    <span class="badge"><i class="fas fa-tools"></i> Modern Equipment</span>
-    <span class="badge"><i class="fas fa-clock"></i> 24/7 Emergency</span>
+    <span class="badge">✓ BS3998 Standards</span>
+    <span class="badge">🌿 Eco-Friendly</span>
+    <span class="badge">🔧 Modern Equipment</span>
+    <span class="badge">⏰ 24/7 Emergency</span>
 </div>
 
 <!-- Services -->
